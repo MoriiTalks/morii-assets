@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@source './';
+
+@theme {
+  --color-cream: #fffdf6;
+  --color-ink: #203e38;
+  --color-muted: #5a7168;
+  --color-teal: #08776f;
+  --color-mint: #e6f3ec;
+  --color-line: #d8e6de;
+  --font-sans: 'Segoe UI', system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--color-teal);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}

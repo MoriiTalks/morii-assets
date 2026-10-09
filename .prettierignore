@@ -1,0 +1,7 @@
+node_modules/
+dist/
+docs/
+**/*.md
+pnpm-lock.yaml
+render-output/
+source/

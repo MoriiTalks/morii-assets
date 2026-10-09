@@ -1,0 +1,15 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "files.eol": "\n",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "eslint.validate": ["typescript"],
+  "tailwindCSS.experimental.configFile": "preview/styles.css",
+  "tailwindCSS.classAttributes": ["class", "className"],
+  "css.lint.unknownAtRules": "ignore"
+}

@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+docs/
+**/*.md
+.env
+.env.*
+!.env.example
+*.blend1
+*.blend2
+*.tmp
+*.log
+render-output/
+.DS_Store
+Thumbs.db
+.idea/

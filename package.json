@@ -1,0 +1,36 @@
+{
+  "name": "@moriitalks/assets",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "scripts": {
+    "dev": "pnpm build && node scripts/preview.ts",
+    "build": "pnpm build:styles && pnpm build:preview",
+    "build:styles": "tailwindcss -i preview/styles.css -o dist/styles.css --minify",
+    "build:preview": "esbuild preview/app.ts --bundle --format=esm --target=es2022 --outfile=dist/app.js --minify",
+    "validate": "node scripts/validate.ts",
+    "test": "node --test scripts/catalog.test.ts",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm validate && pnpm test && pnpm build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@tailwindcss/cli": "4.3.3",
+    "@types/node": "24.19.1",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.9",
+    "prettier-plugin-tailwindcss": "0.8.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1"
+  }
+}

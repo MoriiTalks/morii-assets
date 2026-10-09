@@ -1,0 +1,50 @@
+{
+  "version": "0.1.0",
+  "character": "Morii",
+  "provenance": "AI-assisted concept art from the initial MoriiTalks design exploration. See source/ for prompt references.",
+  "rights": "Project reference artwork. Redistribution licensing has not been specified.",
+  "assets": [
+    {
+      "id": "morii-wave",
+      "name": "A friendly hello",
+      "path": "exports/images/morii-wave.png",
+      "role": "mascot",
+      "status": "concept-reference"
+    },
+    {
+      "id": "morii-listen",
+      "name": "Ready to listen",
+      "path": "exports/images/morii-listen.png",
+      "role": "mascot",
+      "status": "concept-reference"
+    },
+    {
+      "id": "morii-explain",
+      "name": "Explaining an idea",
+      "path": "exports/images/morii-explain.png",
+      "role": "mascot",
+      "status": "concept-reference"
+    },
+    {
+      "id": "morii-think",
+      "name": "A moment to think",
+      "path": "exports/images/morii-think.png",
+      "role": "mascot",
+      "status": "concept-reference"
+    },
+    {
+      "id": "morii-encourage",
+      "name": "One more try",
+      "path": "exports/images/morii-encourage.png",
+      "role": "mascot",
+      "status": "concept-reference"
+    },
+    {
+      "id": "morii-icon",
+      "name": "Morii app icon",
+      "path": "exports/images/morii-icon.png",
+      "role": "brand",
+      "status": "concept-reference"
+    }
+  ]
+}
