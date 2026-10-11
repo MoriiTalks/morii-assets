@@ -3,6 +3,7 @@ import { resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { type Catalog, parseCatalog } from '../src/catalog.ts';
+import { validatePNG } from './png.ts';
 
 export const repositoryRoot = fileURLToPath(new URL('../', import.meta.url));
 
@@ -22,16 +23,7 @@ export async function validateCatalog(value: unknown, root = repositoryRoot): Pr
     }
     const info = await stat(file);
     if (!info.isFile() || info.size === 0) throw new Error(`Empty or invalid export: ${asset.id}`);
-    const data = await readFile(file);
-    if (
-      data.length < 24 ||
-      !data.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))
-    ) {
-      throw new Error(`Export is not a PNG: ${asset.id}`);
-    }
-    if (data.readUInt32BE(16) === 0 || data.readUInt32BE(20) === 0) {
-      throw new Error(`Invalid image dimensions: ${asset.id}`);
-    }
+    validatePNG(await readFile(file), asset.id);
   }
 
   return catalog;
