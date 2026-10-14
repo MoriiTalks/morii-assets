@@ -4,5 +4,6 @@ docs/
 **/*.md
 pnpm-lock.yaml
 render-output/
+validation/
 source/
 exports/models/*.metadata.json
