@@ -1,0 +1,21 @@
+{
+  "stage": "geometry-03",
+  "status": "deferred-by-user",
+  "reason": "User requested keeping the 3D study in assets and using only 2D in the application until a later advanced phase.",
+  "verified": [
+    "Blender MCP connected to Blender 5.2.2 LTS",
+    "editable candidate saved and copied into geometry-03 checkpoint",
+    "wave rendered at native 1254x1254 resolution",
+    "listen, think, explain and encourage study renders saved at 501x501",
+    "original five PNG reference assets retained"
+  ],
+  "incomplete": [
+    "four remaining native-resolution pose renders",
+    "fresh five-pose candidate annotations and final metrics",
+    "visual approval",
+    "final rig, animation, GLB and application validation"
+  ],
+  "applicationAssetsReplaced": false,
+  "candidateSource": "source/morii/reconstruct.py",
+  "candidateScene": "source/morii/reconstruction/morii-candidate.blend"
+}

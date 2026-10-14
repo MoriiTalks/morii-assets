@@ -1,0 +1,4806 @@
+{
+  "schema_version": 1,
+  "annotation_method": "Human visual estimates on complete source PNGs at 1254 x 1254; annotated derivatives visually checked against source anatomy. No model-generated landmarks. No image warping.",
+  "coordinate_system": "pixel_xy_top_left",
+  "coordinate_system_note": "top-left origin, x right, y down; boxes [left,top,right,bottom] in source pixels; source and component mask bounds use exclusive right/bottom; manual anatomical boxes approximate continuous extents",
+  "facial_landmarks": [
+    "eye_image_left_center",
+    "eye_image_right_center",
+    "pupil_image_left_center",
+    "pupil_image_right_center",
+    "nose_center",
+    "mouth_junction",
+    "mouth_image_left_corner",
+    "mouth_image_right_corner",
+    "cheek_image_left_center",
+    "cheek_image_right_center"
+  ],
+  "major_measurements": [
+    "head_without_ears_tuft_whiskers_aabb_width",
+    "head_without_ears_tuft_whiskers_aabb_height",
+    "torso_hips_visible_aabb_width",
+    "torso_hips_visible_aabb_height",
+    "ear_image_left_outer_aabb_width",
+    "ear_image_left_outer_aabb_height",
+    "ear_image_right_outer_aabb_width",
+    "ear_image_right_outer_aabb_height",
+    "belly_visible_aabb_width",
+    "belly_visible_aabb_height",
+    "foot_image_left_aabb_width",
+    "foot_image_left_aabb_height",
+    "foot_image_right_aabb_width",
+    "foot_image_right_aabb_height",
+    "tail_visible_aabb_width",
+    "tail_visible_aabb_height",
+    "eye_center_distance"
+  ],
+  "manual_uncertainty_pixels": 8,
+  "manual_uncertainty_note": "Approximate per-coordinate uncertainty; anatomical boundaries under occlusion are not established ground truth. This is not an accuracy confidence interval. A 3% dimension threshold can be smaller than this annotation uncertainty for ears or feet; borderline results require visual review.",
+  "silhouette_method": "alpha >=128, largest 8-connected component; full alpha bbox also recorded because cutout images have disconnected low-alpha edge artifacts",
+  "poses": {
+    "wave": {
+      "source_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-wave.png",
+      "image_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-wave.png",
+      "width": 1254,
+      "height": 1254,
+      "landmarks": {
+        "eye_image_left_center": [
+          495.0,
+          390.0
+        ],
+        "eye_image_right_center": [
+          793.0,
+          333.0
+        ],
+        "pupil_image_left_center": [
+          499.0,
+          391.0
+        ],
+        "pupil_image_right_center": [
+          792.0,
+          334.0
+        ],
+        "nose_center": [
+          655.0,
+          391.0
+        ],
+        "mouth_junction": [
+          664.0,
+          449.0
+        ],
+        "mouth_image_left_corner": [
+          561.0,
+          455.0
+        ],
+        "mouth_image_right_corner": [
+          756.0,
+          417.0
+        ],
+        "ear_image_left_center": [
+          357.0,
+          313.0
+        ],
+        "ear_image_right_center": [
+          851.0,
+          223.0
+        ],
+        "head_top": [
+          654.0,
+          137.0
+        ],
+        "chin": [
+          606.0,
+          600.0
+        ],
+        "cheek_image_left_center": [
+          452.0,
+          458.0
+        ],
+        "cheek_image_right_center": [
+          854.0,
+          382.0
+        ],
+        "belly_top_center": [
+          674.0,
+          578.0
+        ],
+        "belly_bottom": [
+          696.0,
+          1043.0
+        ],
+        "foot_image_left_center": [
+          515.0,
+          1120.0
+        ],
+        "foot_image_right_center": [
+          816.0,
+          1116.0
+        ],
+        "tail_tip": [
+          241.0,
+          847.0
+        ],
+        "tail_base_visible": [
+          444.0,
+          984.0
+        ],
+        "raised_paw_main_pad_center": [
+          958.0,
+          583.0
+        ]
+      },
+      "measurements": {
+        "head_without_ears_tuft_whiskers_aabb_width": {
+          "start": [
+            344.0,
+            368.5
+          ],
+          "end": [
+            925.0,
+            368.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "head_without_ears_tuft_whiskers_aabb_height": {
+          "start": [
+            634.5,
+            136.0
+          ],
+          "end": [
+            634.5,
+            601.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_width": {
+          "start": [
+            457.0,
+            390.5
+          ],
+          "end": [
+            533.0,
+            390.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_height": {
+          "start": [
+            495.0,
+            352.0
+          ],
+          "end": [
+            495.0,
+            429.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_width": {
+          "start": [
+            758.0,
+            333.0
+          ],
+          "end": [
+            831.0,
+            333.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_height": {
+          "start": [
+            794.5,
+            293.0
+          ],
+          "end": [
+            794.5,
+            373.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_width": {
+          "start": [
+            289.0,
+            312.0
+          ],
+          "end": [
+            427.0,
+            312.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_height": {
+          "start": [
+            358.0,
+            237.0
+          ],
+          "end": [
+            358.0,
+            387.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_width": {
+          "start": [
+            789.0,
+            221.0
+          ],
+          "end": [
+            911.0,
+            221.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_height": {
+          "start": [
+            850.0,
+            155.0
+          ],
+          "end": [
+            850.0,
+            287.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_width": {
+          "start": [
+            326.0,
+            316.0
+          ],
+          "end": [
+            385.0,
+            316.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_height": {
+          "start": [
+            355.5,
+            278.0
+          ],
+          "end": [
+            355.5,
+            354.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_width": {
+          "start": [
+            823.0,
+            227.0
+          ],
+          "end": [
+            883.0,
+            227.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_height": {
+          "start": [
+            853.0,
+            191.0
+          ],
+          "end": [
+            853.0,
+            263.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_width": {
+          "start": [
+            602.0,
+            391.0
+          ],
+          "end": [
+            707.0,
+            391.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_height": {
+          "start": [
+            654.5,
+            358.0
+          ],
+          "end": [
+            654.5,
+            424.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_width": {
+          "start": [
+            356.0,
+            470.0
+          ],
+          "end": [
+            928.0,
+            470.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_height": {
+          "start": [
+            642.0,
+            339.0
+          ],
+          "end": [
+            642.0,
+            601.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_width": {
+          "start": [
+            539.0,
+            807.0
+          ],
+          "end": [
+            860.0,
+            807.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_height": {
+          "start": [
+            699.5,
+            569.0
+          ],
+          "end": [
+            699.5,
+            1045.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_width": {
+          "start": [
+            432.0,
+            826.0
+          ],
+          "end": [
+            904.0,
+            826.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_height": {
+          "start": [
+            668.0,
+            568.0
+          ],
+          "end": [
+            668.0,
+            1084.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_width": {
+          "start": [
+            417.0,
+            1118.0
+          ],
+          "end": [
+            608.0,
+            1118.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_height": {
+          "start": [
+            512.5,
+            1070.0
+          ],
+          "end": [
+            512.5,
+            1166.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_width": {
+          "start": [
+            715.0,
+            1111.5
+          ],
+          "end": [
+            917.0,
+            1111.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_height": {
+          "start": [
+            816.0,
+            1066.0
+          ],
+          "end": [
+            816.0,
+            1157.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_width": {
+          "start": [
+            219.0,
+            954.5
+          ],
+          "end": [
+            464.0,
+            954.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_height": {
+          "start": [
+            341.5,
+            843.0
+          ],
+          "end": [
+            341.5,
+            1066.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_width": {
+          "start": [
+            516.0,
+            135.0
+          ],
+          "end": [
+            654.0,
+            135.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_height": {
+          "start": [
+            585.0,
+            100.0
+          ],
+          "end": [
+            585.0,
+            170.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_center_distance": {
+          "start": [
+            495.0,
+            390.0
+          ],
+          "end": [
+            793.0,
+            333.0
+          ],
+          "method": "Euclidean distance between manually annotated eye opening centers"
+        }
+      },
+      "source_sha256": "a8777a1673c8f8764ba05ddbf118b4cdaca4361364e716d2ed954216a6a69672",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_any_bbox": [
+        0,
+        3,
+        1220,
+        1230
+      ],
+      "source_alpha128_bbox": [
+        221,
+        102,
+        1038,
+        1163
+      ],
+      "largest_alpha128_component_bbox": [
+        221,
+        102,
+        1038,
+        1163
+      ],
+      "largest_alpha128_component_bbox_normalized": [
+        0.176236,
+        0.08134,
+        0.827751,
+        0.927432
+      ],
+      "largest_alpha128_component_area_pixels": 518443,
+      "manual_boxes_pixels": {
+        "head_without_ears_tuft_whiskers": [
+          344.0,
+          136.0,
+          925.0,
+          601.0
+        ],
+        "eye_image_left": [
+          457.0,
+          352.0,
+          533.0,
+          429.0
+        ],
+        "eye_image_right": [
+          758.0,
+          293.0,
+          831.0,
+          373.0
+        ],
+        "ear_image_left_outer": [
+          289.0,
+          237.0,
+          427.0,
+          387.0
+        ],
+        "ear_image_right_outer": [
+          789.0,
+          155.0,
+          911.0,
+          287.0
+        ],
+        "ear_image_left_inner": [
+          326.0,
+          278.0,
+          385.0,
+          354.0
+        ],
+        "ear_image_right_inner": [
+          823.0,
+          191.0,
+          883.0,
+          263.0
+        ],
+        "nose": [
+          602.0,
+          358.0,
+          707.0,
+          424.0
+        ],
+        "muzzle": [
+          356.0,
+          339.0,
+          928.0,
+          601.0
+        ],
+        "belly_visible": [
+          539.0,
+          569.0,
+          860.0,
+          1045.0
+        ],
+        "torso_hips_visible": [
+          432.0,
+          568.0,
+          904.0,
+          1084.0
+        ],
+        "foot_image_left": [
+          417.0,
+          1070.0,
+          608.0,
+          1166.0
+        ],
+        "foot_image_right": [
+          715.0,
+          1066.0,
+          917.0,
+          1157.0
+        ],
+        "tail_visible": [
+          219.0,
+          843.0,
+          464.0,
+          1066.0
+        ],
+        "tuft": [
+          516.0,
+          100.0,
+          654.0,
+          170.0
+        ]
+      },
+      "manual_boxes_normalized": {
+        "head_without_ears_tuft_whiskers": [
+          0.274322,
+          0.108453,
+          0.73764,
+          0.479266
+        ],
+        "eye_image_left": [
+          0.364434,
+          0.280702,
+          0.42504,
+          0.342105
+        ],
+        "eye_image_right": [
+          0.604466,
+          0.233652,
+          0.662679,
+          0.297448
+        ],
+        "ear_image_left_outer": [
+          0.230463,
+          0.188995,
+          0.34051,
+          0.308612
+        ],
+        "ear_image_right_outer": [
+          0.629187,
+          0.123604,
+          0.726475,
+          0.228868
+        ],
+        "ear_image_left_inner": [
+          0.259968,
+          0.221691,
+          0.307018,
+          0.282297
+        ],
+        "ear_image_right_inner": [
+          0.6563,
+          0.152313,
+          0.704147,
+          0.209729
+        ],
+        "nose": [
+          0.480064,
+          0.285486,
+          0.563796,
+          0.338118
+        ],
+        "muzzle": [
+          0.283892,
+          0.270335,
+          0.740032,
+          0.479266
+        ],
+        "belly_visible": [
+          0.429825,
+          0.453748,
+          0.685805,
+          0.833333
+        ],
+        "torso_hips_visible": [
+          0.344498,
+          0.452951,
+          0.720893,
+          0.864434
+        ],
+        "foot_image_left": [
+          0.332536,
+          0.85327,
+          0.484848,
+          0.929825
+        ],
+        "foot_image_right": [
+          0.570175,
+          0.85008,
+          0.73126,
+          0.922648
+        ],
+        "tail_visible": [
+          0.174641,
+          0.672249,
+          0.370016,
+          0.85008
+        ],
+        "tuft": [
+          0.411483,
+          0.079745,
+          0.521531,
+          0.135566
+        ]
+      },
+      "manual_points_pixels": {
+        "eye_image_left_center": [
+          495.0,
+          390.0
+        ],
+        "eye_image_right_center": [
+          793.0,
+          333.0
+        ],
+        "pupil_image_left_center": [
+          499.0,
+          391.0
+        ],
+        "pupil_image_right_center": [
+          792.0,
+          334.0
+        ],
+        "nose_center": [
+          655.0,
+          391.0
+        ],
+        "mouth_junction": [
+          664.0,
+          449.0
+        ],
+        "mouth_image_left_corner": [
+          561.0,
+          455.0
+        ],
+        "mouth_image_right_corner": [
+          756.0,
+          417.0
+        ],
+        "ear_image_left_center": [
+          357.0,
+          313.0
+        ],
+        "ear_image_right_center": [
+          851.0,
+          223.0
+        ],
+        "head_top": [
+          654.0,
+          137.0
+        ],
+        "chin": [
+          606.0,
+          600.0
+        ],
+        "cheek_image_left_center": [
+          452.0,
+          458.0
+        ],
+        "cheek_image_right_center": [
+          854.0,
+          382.0
+        ],
+        "belly_top_center": [
+          674.0,
+          578.0
+        ],
+        "belly_bottom": [
+          696.0,
+          1043.0
+        ],
+        "foot_image_left_center": [
+          515.0,
+          1120.0
+        ],
+        "foot_image_right_center": [
+          816.0,
+          1116.0
+        ],
+        "tail_tip": [
+          241.0,
+          847.0
+        ],
+        "tail_base_visible": [
+          444.0,
+          984.0
+        ],
+        "raised_paw_main_pad_center": [
+          958.0,
+          583.0
+        ]
+      },
+      "manual_points_normalized": {
+        "eye_image_left_center": [
+          0.394737,
+          0.311005
+        ],
+        "eye_image_right_center": [
+          0.632376,
+          0.26555
+        ],
+        "pupil_image_left_center": [
+          0.397927,
+          0.311802
+        ],
+        "pupil_image_right_center": [
+          0.631579,
+          0.266348
+        ],
+        "nose_center": [
+          0.522329,
+          0.311802
+        ],
+        "mouth_junction": [
+          0.529506,
+          0.358054
+        ],
+        "mouth_image_left_corner": [
+          0.447368,
+          0.362839
+        ],
+        "mouth_image_right_corner": [
+          0.602871,
+          0.332536
+        ],
+        "ear_image_left_center": [
+          0.284689,
+          0.249601
+        ],
+        "ear_image_right_center": [
+          0.678628,
+          0.177831
+        ],
+        "head_top": [
+          0.521531,
+          0.10925
+        ],
+        "chin": [
+          0.483254,
+          0.478469
+        ],
+        "cheek_image_left_center": [
+          0.360447,
+          0.365231
+        ],
+        "cheek_image_right_center": [
+          0.681021,
+          0.304625
+        ],
+        "belly_top_center": [
+          0.53748,
+          0.460925
+        ],
+        "belly_bottom": [
+          0.555024,
+          0.831738
+        ],
+        "foot_image_left_center": [
+          0.410686,
+          0.893142
+        ],
+        "foot_image_right_center": [
+          0.650718,
+          0.889952
+        ],
+        "tail_tip": [
+          0.192185,
+          0.675439
+        ],
+        "tail_base_visible": [
+          0.354067,
+          0.784689
+        ],
+        "raised_paw_main_pad_center": [
+          0.763955,
+          0.464912
+        ]
+      },
+      "manual_muzzle_top_contour_pixels": [
+        [
+          360.0,
+          485.0
+        ],
+        [
+          385.0,
+          441.0
+        ],
+        [
+          440.0,
+          419.0
+        ],
+        [
+          490.0,
+          421.0
+        ],
+        [
+          530.0,
+          425.0
+        ],
+        [
+          603.0,
+          373.0
+        ],
+        [
+          662.0,
+          358.0
+        ],
+        [
+          716.0,
+          361.0
+        ],
+        [
+          770.0,
+          375.0
+        ],
+        [
+          831.0,
+          344.0
+        ],
+        [
+          868.0,
+          340.0
+        ],
+        [
+          900.0,
+          353.0
+        ],
+        [
+          923.0,
+          384.0
+        ]
+      ],
+      "manual_muzzle_top_contour_normalized": [
+        [
+          0.287081,
+          0.386762
+        ],
+        [
+          0.307018,
+          0.351675
+        ],
+        [
+          0.350877,
+          0.334131
+        ],
+        [
+          0.39075,
+          0.335726
+        ],
+        [
+          0.422648,
+          0.338915
+        ],
+        [
+          0.480861,
+          0.297448
+        ],
+        [
+          0.527911,
+          0.285486
+        ],
+        [
+          0.570973,
+          0.287879
+        ],
+        [
+          0.614035,
+          0.299043
+        ],
+        [
+          0.662679,
+          0.274322
+        ],
+        [
+          0.692185,
+          0.271132
+        ],
+        [
+          0.717703,
+          0.281499
+        ],
+        [
+          0.736045,
+          0.30622
+        ]
+      ],
+      "projected_metrics": {
+        "head_width_pixels": 581.0,
+        "head_height_pixels": 465.0,
+        "head_width_to_height": 1.2495,
+        "head_width_to_visible_torso_hips_width": 1.2309,
+        "head_height_to_component_height": 0.4383,
+        "head_height_to_below_chin_visible_height": 0.8274,
+        "eye_center_distance_pixels": 303.402,
+        "eye_center_distance_to_head_width": 0.5222,
+        "eye_line_roll_degrees_image_y_down": -10.828,
+        "image_left_eye_width_to_head_width": 0.1308,
+        "image_right_eye_width_to_head_width": 0.1256,
+        "nose_width_to_head_width": 0.1807,
+        "nose_height_to_head_height": 0.1419,
+        "visible_belly_width_to_torso_hips_width": 0.6801
+      },
+      "pose_note": "Standing, image-right arm raised; head rolls toward image left. Three whiskers per visible cheek; raised palm shows two small toe pads plus main pad.",
+      "source_unchanged_sha256_check": true
+    },
+    "listen": {
+      "source_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-listen.png",
+      "image_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-listen.png",
+      "width": 1254,
+      "height": 1254,
+      "landmarks": {
+        "eye_image_left_center": [
+          540.0,
+          445.0
+        ],
+        "eye_image_right_center": [
+          832.0,
+          348.0
+        ],
+        "pupil_image_left_center": [
+          543.0,
+          443.0
+        ],
+        "pupil_image_right_center": [
+          830.0,
+          348.0
+        ],
+        "nose_center": [
+          703.0,
+          430.0
+        ],
+        "mouth_junction": [
+          720.0,
+          488.0
+        ],
+        "mouth_image_left_corner": [
+          612.0,
+          511.0
+        ],
+        "mouth_image_right_corner": [
+          812.0,
+          444.0
+        ],
+        "ear_image_left_center": [
+          375.0,
+          370.0
+        ],
+        "ear_image_right_center": [
+          887.0,
+          224.0
+        ],
+        "head_top": [
+          704.0,
+          145.0
+        ],
+        "chin": [
+          608.0,
+          653.0
+        ],
+        "cheek_image_left_center": [
+          506.0,
+          523.0
+        ],
+        "cheek_image_right_center": [
+          903.0,
+          392.0
+        ],
+        "belly_top_center": [
+          749.0,
+          638.0
+        ],
+        "belly_bottom": [
+          721.0,
+          1125.0
+        ],
+        "foot_image_left_center": [
+          575.0,
+          1109.0
+        ],
+        "foot_image_right_center": [
+          879.0,
+          1107.0
+        ],
+        "tail_tip": [
+          231.0,
+          846.0
+        ],
+        "tail_base_visible": [
+          461.0,
+          990.0
+        ],
+        "raised_paw_main_pad_center": [
+          985.0,
+          533.0
+        ]
+      },
+      "measurements": {
+        "head_without_ears_tuft_whiskers_aabb_width": {
+          "start": [
+            383.0,
+            400.0
+          ],
+          "end": [
+            984.0,
+            400.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "head_without_ears_tuft_whiskers_aabb_height": {
+          "start": [
+            683.5,
+            144.0
+          ],
+          "end": [
+            683.5,
+            656.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_width": {
+          "start": [
+            498.0,
+            444.0
+          ],
+          "end": [
+            580.0,
+            444.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_height": {
+          "start": [
+            539.0,
+            404.0
+          ],
+          "end": [
+            539.0,
+            484.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_width": {
+          "start": [
+            795.0,
+            349.0
+          ],
+          "end": [
+            873.0,
+            349.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_height": {
+          "start": [
+            834.0,
+            307.0
+          ],
+          "end": [
+            834.0,
+            391.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_width": {
+          "start": [
+            306.0,
+            367.0
+          ],
+          "end": [
+            445.0,
+            367.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_height": {
+          "start": [
+            375.5,
+            284.0
+          ],
+          "end": [
+            375.5,
+            450.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_width": {
+          "start": [
+            816.0,
+            222.5
+          ],
+          "end": [
+            960.0,
+            222.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_height": {
+          "start": [
+            888.0,
+            152.0
+          ],
+          "end": [
+            888.0,
+            293.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_width": {
+          "start": [
+            347.0,
+            373.5
+          ],
+          "end": [
+            404.0,
+            373.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_height": {
+          "start": [
+            375.5,
+            334.0
+          ],
+          "end": [
+            375.5,
+            413.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_width": {
+          "start": [
+            858.0,
+            232.0
+          ],
+          "end": [
+            923.0,
+            232.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_height": {
+          "start": [
+            890.5,
+            195.0
+          ],
+          "end": [
+            890.5,
+            269.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_width": {
+          "start": [
+            647.0,
+            430.5
+          ],
+          "end": [
+            757.0,
+            430.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_height": {
+          "start": [
+            702.0,
+            392.0
+          ],
+          "end": [
+            702.0,
+            469.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_width": {
+          "start": [
+            397.0,
+            499.5
+          ],
+          "end": [
+            985.0,
+            499.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_height": {
+          "start": [
+            691.0,
+            343.0
+          ],
+          "end": [
+            691.0,
+            656.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_width": {
+          "start": [
+            616.0,
+            860.5
+          ],
+          "end": [
+            908.0,
+            860.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_height": {
+          "start": [
+            762.0,
+            594.0
+          ],
+          "end": [
+            762.0,
+            1127.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_width": {
+          "start": [
+            432.0,
+            878.0
+          ],
+          "end": [
+            999.0,
+            878.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_height": {
+          "start": [
+            715.5,
+            638.0
+          ],
+          "end": [
+            715.5,
+            1118.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_width": {
+          "start": [
+            476.0,
+            1107.0
+          ],
+          "end": [
+            671.0,
+            1107.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_height": {
+          "start": [
+            573.5,
+            1053.0
+          ],
+          "end": [
+            573.5,
+            1161.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_width": {
+          "start": [
+            768.0,
+            1105.5
+          ],
+          "end": [
+            985.0,
+            1105.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_height": {
+          "start": [
+            876.5,
+            1055.0
+          ],
+          "end": [
+            876.5,
+            1156.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_width": {
+          "start": [
+            207.0,
+            978.5
+          ],
+          "end": [
+            480.0,
+            978.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_height": {
+          "start": [
+            343.5,
+            841.0
+          ],
+          "end": [
+            343.5,
+            1116.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_width": {
+          "start": [
+            550.0,
+            139.0
+          ],
+          "end": [
+            710.0,
+            139.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_height": {
+          "start": [
+            630.0,
+            99.0
+          ],
+          "end": [
+            630.0,
+            179.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_center_distance": {
+          "start": [
+            540.0,
+            445.0
+          ],
+          "end": [
+            832.0,
+            348.0
+          ],
+          "method": "Euclidean distance between manually annotated eye opening centers"
+        }
+      },
+      "source_sha256": "de15c999ac7ed4260ffd0e38d0e6440d4d5852bc4ed43785d2a2c8bf7eba0d91",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_any_bbox": [
+        0,
+        21,
+        1236,
+        1230
+      ],
+      "source_alpha128_bbox": [
+        210,
+        101,
+        1060,
+        1160
+      ],
+      "largest_alpha128_component_bbox": [
+        210,
+        101,
+        1060,
+        1160
+      ],
+      "largest_alpha128_component_bbox_normalized": [
+        0.167464,
+        0.080542,
+        0.845295,
+        0.92504
+      ],
+      "largest_alpha128_component_area_pixels": 567299,
+      "manual_boxes_pixels": {
+        "head_without_ears_tuft_whiskers": [
+          383.0,
+          144.0,
+          984.0,
+          656.0
+        ],
+        "eye_image_left": [
+          498.0,
+          404.0,
+          580.0,
+          484.0
+        ],
+        "eye_image_right": [
+          795.0,
+          307.0,
+          873.0,
+          391.0
+        ],
+        "ear_image_left_outer": [
+          306.0,
+          284.0,
+          445.0,
+          450.0
+        ],
+        "ear_image_right_outer": [
+          816.0,
+          152.0,
+          960.0,
+          293.0
+        ],
+        "ear_image_left_inner": [
+          347.0,
+          334.0,
+          404.0,
+          413.0
+        ],
+        "ear_image_right_inner": [
+          858.0,
+          195.0,
+          923.0,
+          269.0
+        ],
+        "nose": [
+          647.0,
+          392.0,
+          757.0,
+          469.0
+        ],
+        "muzzle": [
+          397.0,
+          343.0,
+          985.0,
+          656.0
+        ],
+        "belly_visible": [
+          616.0,
+          594.0,
+          908.0,
+          1127.0
+        ],
+        "torso_hips_visible": [
+          432.0,
+          638.0,
+          999.0,
+          1118.0
+        ],
+        "foot_image_left": [
+          476.0,
+          1053.0,
+          671.0,
+          1161.0
+        ],
+        "foot_image_right": [
+          768.0,
+          1055.0,
+          985.0,
+          1156.0
+        ],
+        "tail_visible": [
+          207.0,
+          841.0,
+          480.0,
+          1116.0
+        ],
+        "tuft": [
+          550.0,
+          99.0,
+          710.0,
+          179.0
+        ]
+      },
+      "manual_boxes_normalized": {
+        "head_without_ears_tuft_whiskers": [
+          0.305423,
+          0.114833,
+          0.784689,
+          0.523126
+        ],
+        "eye_image_left": [
+          0.397129,
+          0.322169,
+          0.46252,
+          0.385965
+        ],
+        "eye_image_right": [
+          0.633971,
+          0.244817,
+          0.696172,
+          0.311802
+        ],
+        "ear_image_left_outer": [
+          0.244019,
+          0.226475,
+          0.354864,
+          0.358852
+        ],
+        "ear_image_right_outer": [
+          0.650718,
+          0.121212,
+          0.76555,
+          0.233652
+        ],
+        "ear_image_left_inner": [
+          0.276715,
+          0.266348,
+          0.322169,
+          0.329346
+        ],
+        "ear_image_right_inner": [
+          0.684211,
+          0.155502,
+          0.736045,
+          0.214514
+        ],
+        "nose": [
+          0.515949,
+          0.3126,
+          0.603668,
+          0.374003
+        ],
+        "muzzle": [
+          0.316587,
+          0.273525,
+          0.785486,
+          0.523126
+        ],
+        "belly_visible": [
+          0.491228,
+          0.473684,
+          0.724083,
+          0.898724
+        ],
+        "torso_hips_visible": [
+          0.344498,
+          0.508772,
+          0.796651,
+          0.891547
+        ],
+        "foot_image_left": [
+          0.379585,
+          0.839713,
+          0.535088,
+          0.925837
+        ],
+        "foot_image_right": [
+          0.61244,
+          0.841308,
+          0.785486,
+          0.92185
+        ],
+        "tail_visible": [
+          0.165072,
+          0.670654,
+          0.382775,
+          0.889952
+        ],
+        "tuft": [
+          0.438596,
+          0.078947,
+          0.566188,
+          0.142743
+        ]
+      },
+      "manual_points_pixels": {
+        "eye_image_left_center": [
+          540.0,
+          445.0
+        ],
+        "eye_image_right_center": [
+          832.0,
+          348.0
+        ],
+        "pupil_image_left_center": [
+          543.0,
+          443.0
+        ],
+        "pupil_image_right_center": [
+          830.0,
+          348.0
+        ],
+        "nose_center": [
+          703.0,
+          430.0
+        ],
+        "mouth_junction": [
+          720.0,
+          488.0
+        ],
+        "mouth_image_left_corner": [
+          612.0,
+          511.0
+        ],
+        "mouth_image_right_corner": [
+          812.0,
+          444.0
+        ],
+        "ear_image_left_center": [
+          375.0,
+          370.0
+        ],
+        "ear_image_right_center": [
+          887.0,
+          224.0
+        ],
+        "head_top": [
+          704.0,
+          145.0
+        ],
+        "chin": [
+          608.0,
+          653.0
+        ],
+        "cheek_image_left_center": [
+          506.0,
+          523.0
+        ],
+        "cheek_image_right_center": [
+          903.0,
+          392.0
+        ],
+        "belly_top_center": [
+          749.0,
+          638.0
+        ],
+        "belly_bottom": [
+          721.0,
+          1125.0
+        ],
+        "foot_image_left_center": [
+          575.0,
+          1109.0
+        ],
+        "foot_image_right_center": [
+          879.0,
+          1107.0
+        ],
+        "tail_tip": [
+          231.0,
+          846.0
+        ],
+        "tail_base_visible": [
+          461.0,
+          990.0
+        ],
+        "raised_paw_main_pad_center": [
+          985.0,
+          533.0
+        ]
+      },
+      "manual_points_normalized": {
+        "eye_image_left_center": [
+          0.430622,
+          0.354864
+        ],
+        "eye_image_right_center": [
+          0.663477,
+          0.277512
+        ],
+        "pupil_image_left_center": [
+          0.433014,
+          0.35327
+        ],
+        "pupil_image_right_center": [
+          0.661882,
+          0.277512
+        ],
+        "nose_center": [
+          0.560606,
+          0.342903
+        ],
+        "mouth_junction": [
+          0.574163,
+          0.389155
+        ],
+        "mouth_image_left_corner": [
+          0.488038,
+          0.407496
+        ],
+        "mouth_image_right_corner": [
+          0.647528,
+          0.354067
+        ],
+        "ear_image_left_center": [
+          0.299043,
+          0.295056
+        ],
+        "ear_image_right_center": [
+          0.707337,
+          0.178628
+        ],
+        "head_top": [
+          0.561404,
+          0.11563
+        ],
+        "chin": [
+          0.484848,
+          0.520734
+        ],
+        "cheek_image_left_center": [
+          0.403509,
+          0.417065
+        ],
+        "cheek_image_right_center": [
+          0.720096,
+          0.3126
+        ],
+        "belly_top_center": [
+          0.597289,
+          0.508772
+        ],
+        "belly_bottom": [
+          0.57496,
+          0.897129
+        ],
+        "foot_image_left_center": [
+          0.458533,
+          0.88437
+        ],
+        "foot_image_right_center": [
+          0.700957,
+          0.882775
+        ],
+        "tail_tip": [
+          0.184211,
+          0.674641
+        ],
+        "tail_base_visible": [
+          0.367624,
+          0.789474
+        ],
+        "raised_paw_main_pad_center": [
+          0.785486,
+          0.42504
+        ]
+      },
+      "manual_muzzle_top_contour_pixels": [
+        [
+          399.0,
+          559.0
+        ],
+        [
+          437.0,
+          500.0
+        ],
+        [
+          486.0,
+          480.0
+        ],
+        [
+          539.0,
+          482.0
+        ],
+        [
+          580.0,
+          474.0
+        ],
+        [
+          643.0,
+          426.0
+        ],
+        [
+          701.0,
+          390.0
+        ],
+        [
+          751.0,
+          387.0
+        ],
+        [
+          800.0,
+          391.0
+        ],
+        [
+          843.0,
+          365.0
+        ],
+        [
+          883.0,
+          344.0
+        ],
+        [
+          929.0,
+          346.0
+        ],
+        [
+          966.0,
+          375.0
+        ]
+      ],
+      "manual_muzzle_top_contour_normalized": [
+        [
+          0.318182,
+          0.445774
+        ],
+        [
+          0.348485,
+          0.398724
+        ],
+        [
+          0.38756,
+          0.382775
+        ],
+        [
+          0.429825,
+          0.38437
+        ],
+        [
+          0.46252,
+          0.37799
+        ],
+        [
+          0.512759,
+          0.339713
+        ],
+        [
+          0.559011,
+          0.311005
+        ],
+        [
+          0.598884,
+          0.308612
+        ],
+        [
+          0.637959,
+          0.311802
+        ],
+        [
+          0.672249,
+          0.291069
+        ],
+        [
+          0.704147,
+          0.274322
+        ],
+        [
+          0.740829,
+          0.275917
+        ],
+        [
+          0.770335,
+          0.299043
+        ]
+      ],
+      "projected_metrics": {
+        "head_width_pixels": 601.0,
+        "head_height_pixels": 512.0,
+        "head_width_to_height": 1.1738,
+        "head_width_to_visible_torso_hips_width": 1.06,
+        "head_height_to_component_height": 0.4835,
+        "head_height_to_below_chin_visible_height": 1.0159,
+        "eye_center_distance_pixels": 307.69,
+        "eye_center_distance_to_head_width": 0.512,
+        "eye_line_roll_degrees_image_y_down": -18.376,
+        "image_left_eye_width_to_head_width": 0.1364,
+        "image_right_eye_width_to_head_width": 0.1298,
+        "nose_width_to_head_width": 0.183,
+        "nose_height_to_head_height": 0.1504,
+        "visible_belly_width_to_torso_hips_width": 0.515
+      },
+      "pose_note": "Seated or crouched, image-right palm near cheek/ear; stronger head roll. Belly and thigh overlap differ from standing; do not infer shorter skeleton from this silhouette.",
+      "source_unchanged_sha256_check": true
+    },
+    "explain": {
+      "source_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-explain.png",
+      "image_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-explain.png",
+      "width": 1254,
+      "height": 1254,
+      "landmarks": {
+        "eye_image_left_center": [
+          479.0,
+          391.0
+        ],
+        "eye_image_right_center": [
+          778.0,
+          334.0
+        ],
+        "pupil_image_left_center": [
+          482.0,
+          390.0
+        ],
+        "pupil_image_right_center": [
+          777.0,
+          335.0
+        ],
+        "nose_center": [
+          638.0,
+          393.0
+        ],
+        "mouth_junction": [
+          647.0,
+          451.0
+        ],
+        "mouth_image_left_corner": [
+          544.0,
+          458.0
+        ],
+        "mouth_image_right_corner": [
+          740.0,
+          417.0
+        ],
+        "ear_image_left_center": [
+          345.0,
+          310.0
+        ],
+        "ear_image_right_center": [
+          840.0,
+          214.0
+        ],
+        "head_top": [
+          639.0,
+          137.0
+        ],
+        "chin": [
+          586.0,
+          600.0
+        ],
+        "cheek_image_left_center": [
+          435.0,
+          459.0
+        ],
+        "cheek_image_right_center": [
+          841.0,
+          382.0
+        ],
+        "belly_top_center": [
+          692.0,
+          567.0
+        ],
+        "belly_bottom": [
+          705.0,
+          1037.0
+        ],
+        "foot_image_left_center": [
+          512.0,
+          1125.0
+        ],
+        "foot_image_right_center": [
+          826.0,
+          1115.0
+        ],
+        "tail_tip": [
+          201.0,
+          846.0
+        ],
+        "tail_base_visible": [
+          453.0,
+          984.0
+        ],
+        "raised_paw_main_pad_center": [
+          1046.0,
+          606.0
+        ]
+      },
+      "measurements": {
+        "head_without_ears_tuft_whiskers_aabb_width": {
+          "start": [
+            331.0,
+            368.0
+          ],
+          "end": [
+            920.0,
+            368.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "head_without_ears_tuft_whiskers_aabb_height": {
+          "start": [
+            625.5,
+            135.0
+          ],
+          "end": [
+            625.5,
+            601.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_width": {
+          "start": [
+            440.0,
+            391.0
+          ],
+          "end": [
+            516.0,
+            391.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_height": {
+          "start": [
+            478.0,
+            352.0
+          ],
+          "end": [
+            478.0,
+            430.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_width": {
+          "start": [
+            741.0,
+            333.5
+          ],
+          "end": [
+            815.0,
+            333.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_height": {
+          "start": [
+            778.0,
+            294.0
+          ],
+          "end": [
+            778.0,
+            373.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_width": {
+          "start": [
+            275.0,
+            309.0
+          ],
+          "end": [
+            414.0,
+            309.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_height": {
+          "start": [
+            344.5,
+            233.0
+          ],
+          "end": [
+            344.5,
+            385.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_width": {
+          "start": [
+            775.0,
+            214.0
+          ],
+          "end": [
+            904.0,
+            214.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_height": {
+          "start": [
+            839.5,
+            148.0
+          ],
+          "end": [
+            839.5,
+            280.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_width": {
+          "start": [
+            314.0,
+            315.5
+          ],
+          "end": [
+            374.0,
+            315.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_height": {
+          "start": [
+            344.0,
+            278.0
+          ],
+          "end": [
+            344.0,
+            353.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_width": {
+          "start": [
+            813.0,
+            223.5
+          ],
+          "end": [
+            873.0,
+            223.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_height": {
+          "start": [
+            843.0,
+            188.0
+          ],
+          "end": [
+            843.0,
+            259.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_width": {
+          "start": [
+            583.0,
+            393.0
+          ],
+          "end": [
+            691.0,
+            393.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_height": {
+          "start": [
+            637.0,
+            359.0
+          ],
+          "end": [
+            637.0,
+            427.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_width": {
+          "start": [
+            344.0,
+            469.5
+          ],
+          "end": [
+            922.0,
+            469.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_height": {
+          "start": [
+            633.0,
+            338.0
+          ],
+          "end": [
+            633.0,
+            601.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_width": {
+          "start": [
+            580.0,
+            796.0
+          ],
+          "end": [
+            878.0,
+            796.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_height": {
+          "start": [
+            729.0,
+            553.0
+          ],
+          "end": [
+            729.0,
+            1039.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_width": {
+          "start": [
+            450.0,
+            832.5
+          ],
+          "end": [
+            917.0,
+            832.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_height": {
+          "start": [
+            683.5,
+            577.0
+          ],
+          "end": [
+            683.5,
+            1088.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_width": {
+          "start": [
+            415.0,
+            1123.5
+          ],
+          "end": [
+            607.0,
+            1123.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_height": {
+          "start": [
+            511.0,
+            1077.0
+          ],
+          "end": [
+            511.0,
+            1170.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_width": {
+          "start": [
+            721.0,
+            1113.5
+          ],
+          "end": [
+            932.0,
+            1113.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_height": {
+          "start": [
+            826.5,
+            1068.0
+          ],
+          "end": [
+            826.5,
+            1159.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_width": {
+          "start": [
+            177.0,
+            957.0
+          ],
+          "end": [
+            470.0,
+            957.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_height": {
+          "start": [
+            323.5,
+            841.0
+          ],
+          "end": [
+            323.5,
+            1073.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_width": {
+          "start": [
+            508.0,
+            133.0
+          ],
+          "end": [
+            640.0,
+            133.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_height": {
+          "start": [
+            574.0,
+            94.0
+          ],
+          "end": [
+            574.0,
+            172.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_center_distance": {
+          "start": [
+            479.0,
+            391.0
+          ],
+          "end": [
+            778.0,
+            334.0
+          ],
+          "method": "Euclidean distance between manually annotated eye opening centers"
+        }
+      },
+      "source_sha256": "fa15eba07686b0e2ba87a0780695d2b3ebc371f19f30e75f79a44d7e60a3a4e3",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_any_bbox": [
+        41,
+        19,
+        1206,
+        1254
+      ],
+      "source_alpha128_bbox": [
+        183,
+        97,
+        1137,
+        1170
+      ],
+      "largest_alpha128_component_bbox": [
+        183,
+        97,
+        1137,
+        1170
+      ],
+      "largest_alpha128_component_bbox_normalized": [
+        0.145933,
+        0.077352,
+        0.906699,
+        0.933014
+      ],
+      "largest_alpha128_component_area_pixels": 534748,
+      "manual_boxes_pixels": {
+        "head_without_ears_tuft_whiskers": [
+          331.0,
+          135.0,
+          920.0,
+          601.0
+        ],
+        "eye_image_left": [
+          440.0,
+          352.0,
+          516.0,
+          430.0
+        ],
+        "eye_image_right": [
+          741.0,
+          294.0,
+          815.0,
+          373.0
+        ],
+        "ear_image_left_outer": [
+          275.0,
+          233.0,
+          414.0,
+          385.0
+        ],
+        "ear_image_right_outer": [
+          775.0,
+          148.0,
+          904.0,
+          280.0
+        ],
+        "ear_image_left_inner": [
+          314.0,
+          278.0,
+          374.0,
+          353.0
+        ],
+        "ear_image_right_inner": [
+          813.0,
+          188.0,
+          873.0,
+          259.0
+        ],
+        "nose": [
+          583.0,
+          359.0,
+          691.0,
+          427.0
+        ],
+        "muzzle": [
+          344.0,
+          338.0,
+          922.0,
+          601.0
+        ],
+        "belly_visible": [
+          580.0,
+          553.0,
+          878.0,
+          1039.0
+        ],
+        "torso_hips_visible": [
+          450.0,
+          577.0,
+          917.0,
+          1088.0
+        ],
+        "foot_image_left": [
+          415.0,
+          1077.0,
+          607.0,
+          1170.0
+        ],
+        "foot_image_right": [
+          721.0,
+          1068.0,
+          932.0,
+          1159.0
+        ],
+        "tail_visible": [
+          177.0,
+          841.0,
+          470.0,
+          1073.0
+        ],
+        "tuft": [
+          508.0,
+          94.0,
+          640.0,
+          172.0
+        ]
+      },
+      "manual_boxes_normalized": {
+        "head_without_ears_tuft_whiskers": [
+          0.263955,
+          0.107656,
+          0.733652,
+          0.479266
+        ],
+        "eye_image_left": [
+          0.350877,
+          0.280702,
+          0.411483,
+          0.342903
+        ],
+        "eye_image_right": [
+          0.590909,
+          0.23445,
+          0.64992,
+          0.297448
+        ],
+        "ear_image_left_outer": [
+          0.219298,
+          0.185805,
+          0.330144,
+          0.307018
+        ],
+        "ear_image_right_outer": [
+          0.618022,
+          0.118022,
+          0.720893,
+          0.223285
+        ],
+        "ear_image_left_inner": [
+          0.250399,
+          0.221691,
+          0.298246,
+          0.281499
+        ],
+        "ear_image_right_inner": [
+          0.648325,
+          0.14992,
+          0.696172,
+          0.206539
+        ],
+        "nose": [
+          0.464912,
+          0.286284,
+          0.551037,
+          0.34051
+        ],
+        "muzzle": [
+          0.274322,
+          0.269537,
+          0.735247,
+          0.479266
+        ],
+        "belly_visible": [
+          0.46252,
+          0.440989,
+          0.700159,
+          0.828549
+        ],
+        "torso_hips_visible": [
+          0.358852,
+          0.460128,
+          0.73126,
+          0.867624
+        ],
+        "foot_image_left": [
+          0.330941,
+          0.858852,
+          0.484051,
+          0.933014
+        ],
+        "foot_image_right": [
+          0.57496,
+          0.851675,
+          0.743222,
+          0.924242
+        ],
+        "tail_visible": [
+          0.141148,
+          0.670654,
+          0.374801,
+          0.855662
+        ],
+        "tuft": [
+          0.405104,
+          0.07496,
+          0.510367,
+          0.137161
+        ]
+      },
+      "manual_points_pixels": {
+        "eye_image_left_center": [
+          479.0,
+          391.0
+        ],
+        "eye_image_right_center": [
+          778.0,
+          334.0
+        ],
+        "pupil_image_left_center": [
+          482.0,
+          390.0
+        ],
+        "pupil_image_right_center": [
+          777.0,
+          335.0
+        ],
+        "nose_center": [
+          638.0,
+          393.0
+        ],
+        "mouth_junction": [
+          647.0,
+          451.0
+        ],
+        "mouth_image_left_corner": [
+          544.0,
+          458.0
+        ],
+        "mouth_image_right_corner": [
+          740.0,
+          417.0
+        ],
+        "ear_image_left_center": [
+          345.0,
+          310.0
+        ],
+        "ear_image_right_center": [
+          840.0,
+          214.0
+        ],
+        "head_top": [
+          639.0,
+          137.0
+        ],
+        "chin": [
+          586.0,
+          600.0
+        ],
+        "cheek_image_left_center": [
+          435.0,
+          459.0
+        ],
+        "cheek_image_right_center": [
+          841.0,
+          382.0
+        ],
+        "belly_top_center": [
+          692.0,
+          567.0
+        ],
+        "belly_bottom": [
+          705.0,
+          1037.0
+        ],
+        "foot_image_left_center": [
+          512.0,
+          1125.0
+        ],
+        "foot_image_right_center": [
+          826.0,
+          1115.0
+        ],
+        "tail_tip": [
+          201.0,
+          846.0
+        ],
+        "tail_base_visible": [
+          453.0,
+          984.0
+        ],
+        "raised_paw_main_pad_center": [
+          1046.0,
+          606.0
+        ]
+      },
+      "manual_points_normalized": {
+        "eye_image_left_center": [
+          0.381978,
+          0.311802
+        ],
+        "eye_image_right_center": [
+          0.620415,
+          0.266348
+        ],
+        "pupil_image_left_center": [
+          0.38437,
+          0.311005
+        ],
+        "pupil_image_right_center": [
+          0.619617,
+          0.267145
+        ],
+        "nose_center": [
+          0.508772,
+          0.313397
+        ],
+        "mouth_junction": [
+          0.515949,
+          0.359649
+        ],
+        "mouth_image_left_corner": [
+          0.433812,
+          0.365231
+        ],
+        "mouth_image_right_corner": [
+          0.590112,
+          0.332536
+        ],
+        "ear_image_left_center": [
+          0.27512,
+          0.247209
+        ],
+        "ear_image_right_center": [
+          0.669856,
+          0.170654
+        ],
+        "head_top": [
+          0.509569,
+          0.10925
+        ],
+        "chin": [
+          0.467305,
+          0.478469
+        ],
+        "cheek_image_left_center": [
+          0.34689,
+          0.366029
+        ],
+        "cheek_image_right_center": [
+          0.670654,
+          0.304625
+        ],
+        "belly_top_center": [
+          0.551834,
+          0.452153
+        ],
+        "belly_bottom": [
+          0.562201,
+          0.826954
+        ],
+        "foot_image_left_center": [
+          0.408293,
+          0.897129
+        ],
+        "foot_image_right_center": [
+          0.658692,
+          0.889155
+        ],
+        "tail_tip": [
+          0.160287,
+          0.674641
+        ],
+        "tail_base_visible": [
+          0.361244,
+          0.784689
+        ],
+        "raised_paw_main_pad_center": [
+          0.834131,
+          0.483254
+        ]
+      },
+      "manual_muzzle_top_contour_pixels": [
+        [
+          345.0,
+          479.0
+        ],
+        [
+          375.0,
+          439.0
+        ],
+        [
+          420.0,
+          421.0
+        ],
+        [
+          464.0,
+          423.0
+        ],
+        [
+          512.0,
+          424.0
+        ],
+        [
+          580.0,
+          379.0
+        ],
+        [
+          633.0,
+          358.0
+        ],
+        [
+          687.0,
+          362.0
+        ],
+        [
+          752.0,
+          377.0
+        ],
+        [
+          815.0,
+          343.0
+        ],
+        [
+          851.0,
+          337.0
+        ],
+        [
+          885.0,
+          349.0
+        ],
+        [
+          914.0,
+          386.0
+        ]
+      ],
+      "manual_muzzle_top_contour_normalized": [
+        [
+          0.27512,
+          0.381978
+        ],
+        [
+          0.299043,
+          0.35008
+        ],
+        [
+          0.334928,
+          0.335726
+        ],
+        [
+          0.370016,
+          0.337321
+        ],
+        [
+          0.408293,
+          0.338118
+        ],
+        [
+          0.46252,
+          0.302233
+        ],
+        [
+          0.504785,
+          0.285486
+        ],
+        [
+          0.547847,
+          0.288676
+        ],
+        [
+          0.599681,
+          0.300638
+        ],
+        [
+          0.64992,
+          0.273525
+        ],
+        [
+          0.678628,
+          0.26874
+        ],
+        [
+          0.705742,
+          0.278309
+        ],
+        [
+          0.728868,
+          0.307815
+        ]
+      ],
+      "projected_metrics": {
+        "head_width_pixels": 589.0,
+        "head_height_pixels": 466.0,
+        "head_width_to_height": 1.2639,
+        "head_width_to_visible_torso_hips_width": 1.2612,
+        "head_height_to_component_height": 0.4343,
+        "head_height_to_below_chin_visible_height": 0.819,
+        "eye_center_distance_pixels": 304.385,
+        "eye_center_distance_to_head_width": 0.5168,
+        "eye_line_roll_degrees_image_y_down": -10.793,
+        "image_left_eye_width_to_head_width": 0.129,
+        "image_right_eye_width_to_head_width": 0.1256,
+        "nose_width_to_head_width": 0.1834,
+        "nose_height_to_head_height": 0.1459,
+        "visible_belly_width_to_torso_hips_width": 0.6381
+      },
+      "pose_note": "Standing, image-right arm extends sideways with palm facing camera. This palm shows three small toe pads plus main pad, unlike wave's two visible pads.",
+      "source_unchanged_sha256_check": true
+    },
+    "think": {
+      "source_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-think.png",
+      "image_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-think.png",
+      "width": 1254,
+      "height": 1254,
+      "landmarks": {
+        "eye_image_left_center": [
+          520.0,
+          435.0
+        ],
+        "eye_image_right_center": [
+          811.0,
+          348.0
+        ],
+        "pupil_image_left_center": [
+          530.0,
+          425.0
+        ],
+        "pupil_image_right_center": [
+          817.0,
+          338.0
+        ],
+        "nose_center": [
+          687.0,
+          428.0
+        ],
+        "mouth_junction": [
+          700.0,
+          484.0
+        ],
+        "mouth_image_left_corner": [
+          595.0,
+          511.0
+        ],
+        "mouth_image_right_corner": [
+          797.0,
+          444.0
+        ],
+        "ear_image_left_center": [
+          344.0,
+          372.0
+        ],
+        "ear_image_right_center": [
+          860.0,
+          230.0
+        ],
+        "head_top": [
+          660.0,
+          156.0
+        ],
+        "chin": [
+          596.0,
+          655.0
+        ],
+        "cheek_image_left_center": [
+          482.0,
+          519.0
+        ],
+        "cheek_image_right_center": [
+          880.0,
+          399.0
+        ],
+        "belly_top_center": [
+          757.0,
+          619.0
+        ],
+        "belly_bottom": [
+          731.0,
+          1097.0
+        ],
+        "foot_image_left_center": [
+          561.0,
+          1045.0
+        ],
+        "foot_image_right_center": [
+          955.0,
+          1017.0
+        ],
+        "tail_tip": [
+          227.0,
+          838.0
+        ],
+        "tail_base_visible": [
+          477.0,
+          977.0
+        ],
+        "foot_image_left_main_pad_center": [
+          578.0,
+          1076.0
+        ],
+        "foot_image_right_main_pad_center": [
+          974.0,
+          1052.0
+        ]
+      },
+      "measurements": {
+        "head_without_ears_tuft_whiskers_aabb_width": {
+          "start": [
+            344.0,
+            406.0
+          ],
+          "end": [
+            963.0,
+            406.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "head_without_ears_tuft_whiskers_aabb_height": {
+          "start": [
+            653.5,
+            155.0
+          ],
+          "end": [
+            653.5,
+            657.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_width": {
+          "start": [
+            474.0,
+            434.5
+          ],
+          "end": [
+            566.0,
+            434.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_height": {
+          "start": [
+            520.0,
+            390.0
+          ],
+          "end": [
+            520.0,
+            479.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_width": {
+          "start": [
+            768.0,
+            347.5
+          ],
+          "end": [
+            853.0,
+            347.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_height": {
+          "start": [
+            810.5,
+            301.0
+          ],
+          "end": [
+            810.5,
+            394.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_width": {
+          "start": [
+            273.0,
+            371.0
+          ],
+          "end": [
+            413.0,
+            371.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_height": {
+          "start": [
+            343.0,
+            289.0
+          ],
+          "end": [
+            343.0,
+            453.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_width": {
+          "start": [
+            791.0,
+            228.5
+          ],
+          "end": [
+            928.0,
+            228.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_height": {
+          "start": [
+            859.5,
+            158.0
+          ],
+          "end": [
+            859.5,
+            299.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_width": {
+          "start": [
+            315.0,
+            378.0
+          ],
+          "end": [
+            375.0,
+            378.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_height": {
+          "start": [
+            345.0,
+            339.0
+          ],
+          "end": [
+            345.0,
+            417.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_width": {
+          "start": [
+            829.0,
+            236.0
+          ],
+          "end": [
+            896.0,
+            236.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_height": {
+          "start": [
+            862.5,
+            199.0
+          ],
+          "end": [
+            862.5,
+            273.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_width": {
+          "start": [
+            629.0,
+            428.0
+          ],
+          "end": [
+            745.0,
+            428.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_height": {
+          "start": [
+            687.0,
+            391.0
+          ],
+          "end": [
+            687.0,
+            465.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_width": {
+          "start": [
+            361.0,
+            504.0
+          ],
+          "end": [
+            965.0,
+            504.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_height": {
+          "start": [
+            663.0,
+            351.0
+          ],
+          "end": [
+            663.0,
+            657.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_width": {
+          "start": [
+            569.0,
+            845.0
+          ],
+          "end": [
+            898.0,
+            845.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_height": {
+          "start": [
+            733.5,
+            592.0
+          ],
+          "end": [
+            733.5,
+            1098.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_width": {
+          "start": [
+            434.0,
+            861.5
+          ],
+          "end": [
+            954.0,
+            861.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_height": {
+          "start": [
+            694.0,
+            628.0
+          ],
+          "end": [
+            694.0,
+            1095.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_width": {
+          "start": [
+            459.0,
+            1046.0
+          ],
+          "end": [
+            662.0,
+            1046.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_height": {
+          "start": [
+            560.5,
+            944.0
+          ],
+          "end": [
+            560.5,
+            1148.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_width": {
+          "start": [
+            836.0,
+            1017.0
+          ],
+          "end": [
+            1075.0,
+            1017.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_height": {
+          "start": [
+            955.5,
+            908.0
+          ],
+          "end": [
+            955.5,
+            1126.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_width": {
+          "start": [
+            201.0,
+            967.5
+          ],
+          "end": [
+            495.0,
+            967.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_height": {
+          "start": [
+            348.0,
+            834.0
+          ],
+          "end": [
+            348.0,
+            1101.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_width": {
+          "start": [
+            509.0,
+            161.0
+          ],
+          "end": [
+            647.0,
+            161.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_height": {
+          "start": [
+            578.0,
+            121.0
+          ],
+          "end": [
+            578.0,
+            201.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_center_distance": {
+          "start": [
+            520.0,
+            435.0
+          ],
+          "end": [
+            811.0,
+            348.0
+          ],
+          "method": "Euclidean distance between manually annotated eye opening centers"
+        }
+      },
+      "source_sha256": "999795bfb2c8d647204bdf75c76df0290db403de0a89dcd501e8272a97e73218",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_any_bbox": [
+        0,
+        20,
+        1248,
+        1199
+      ],
+      "source_alpha128_bbox": [
+        205,
+        123,
+        1072,
+        1144
+      ],
+      "largest_alpha128_component_bbox": [
+        205,
+        123,
+        1072,
+        1144
+      ],
+      "largest_alpha128_component_bbox_normalized": [
+        0.163477,
+        0.098086,
+        0.854864,
+        0.912281
+      ],
+      "largest_alpha128_component_area_pixels": 534398,
+      "manual_boxes_pixels": {
+        "head_without_ears_tuft_whiskers": [
+          344.0,
+          155.0,
+          963.0,
+          657.0
+        ],
+        "eye_image_left": [
+          474.0,
+          390.0,
+          566.0,
+          479.0
+        ],
+        "eye_image_right": [
+          768.0,
+          301.0,
+          853.0,
+          394.0
+        ],
+        "ear_image_left_outer": [
+          273.0,
+          289.0,
+          413.0,
+          453.0
+        ],
+        "ear_image_right_outer": [
+          791.0,
+          158.0,
+          928.0,
+          299.0
+        ],
+        "ear_image_left_inner": [
+          315.0,
+          339.0,
+          375.0,
+          417.0
+        ],
+        "ear_image_right_inner": [
+          829.0,
+          199.0,
+          896.0,
+          273.0
+        ],
+        "nose": [
+          629.0,
+          391.0,
+          745.0,
+          465.0
+        ],
+        "muzzle": [
+          361.0,
+          351.0,
+          965.0,
+          657.0
+        ],
+        "belly_visible": [
+          569.0,
+          592.0,
+          898.0,
+          1098.0
+        ],
+        "torso_hips_visible": [
+          434.0,
+          628.0,
+          954.0,
+          1095.0
+        ],
+        "foot_image_left": [
+          459.0,
+          944.0,
+          662.0,
+          1148.0
+        ],
+        "foot_image_right": [
+          836.0,
+          908.0,
+          1075.0,
+          1126.0
+        ],
+        "tail_visible": [
+          201.0,
+          834.0,
+          495.0,
+          1101.0
+        ],
+        "tuft": [
+          509.0,
+          121.0,
+          647.0,
+          201.0
+        ]
+      },
+      "manual_boxes_normalized": {
+        "head_without_ears_tuft_whiskers": [
+          0.274322,
+          0.123604,
+          0.767943,
+          0.523923
+        ],
+        "eye_image_left": [
+          0.37799,
+          0.311005,
+          0.451356,
+          0.381978
+        ],
+        "eye_image_right": [
+          0.61244,
+          0.240032,
+          0.680223,
+          0.314195
+        ],
+        "ear_image_left_outer": [
+          0.217703,
+          0.230463,
+          0.329346,
+          0.361244
+        ],
+        "ear_image_right_outer": [
+          0.630781,
+          0.125997,
+          0.740032,
+          0.238437
+        ],
+        "ear_image_left_inner": [
+          0.251196,
+          0.270335,
+          0.299043,
+          0.332536
+        ],
+        "ear_image_right_inner": [
+          0.661085,
+          0.158692,
+          0.714514,
+          0.217703
+        ],
+        "nose": [
+          0.501595,
+          0.311802,
+          0.594099,
+          0.370813
+        ],
+        "muzzle": [
+          0.287879,
+          0.279904,
+          0.769537,
+          0.523923
+        ],
+        "belly_visible": [
+          0.453748,
+          0.472089,
+          0.716108,
+          0.875598
+        ],
+        "torso_hips_visible": [
+          0.346093,
+          0.500797,
+          0.760766,
+          0.873206
+        ],
+        "foot_image_left": [
+          0.366029,
+          0.752791,
+          0.527911,
+          0.91547
+        ],
+        "foot_image_right": [
+          0.666667,
+          0.724083,
+          0.857257,
+          0.897927
+        ],
+        "tail_visible": [
+          0.160287,
+          0.665072,
+          0.394737,
+          0.87799
+        ],
+        "tuft": [
+          0.405901,
+          0.096491,
+          0.515949,
+          0.160287
+        ]
+      },
+      "manual_points_pixels": {
+        "eye_image_left_center": [
+          520.0,
+          435.0
+        ],
+        "eye_image_right_center": [
+          811.0,
+          348.0
+        ],
+        "pupil_image_left_center": [
+          530.0,
+          425.0
+        ],
+        "pupil_image_right_center": [
+          817.0,
+          338.0
+        ],
+        "nose_center": [
+          687.0,
+          428.0
+        ],
+        "mouth_junction": [
+          700.0,
+          484.0
+        ],
+        "mouth_image_left_corner": [
+          595.0,
+          511.0
+        ],
+        "mouth_image_right_corner": [
+          797.0,
+          444.0
+        ],
+        "ear_image_left_center": [
+          344.0,
+          372.0
+        ],
+        "ear_image_right_center": [
+          860.0,
+          230.0
+        ],
+        "head_top": [
+          660.0,
+          156.0
+        ],
+        "chin": [
+          596.0,
+          655.0
+        ],
+        "cheek_image_left_center": [
+          482.0,
+          519.0
+        ],
+        "cheek_image_right_center": [
+          880.0,
+          399.0
+        ],
+        "belly_top_center": [
+          757.0,
+          619.0
+        ],
+        "belly_bottom": [
+          731.0,
+          1097.0
+        ],
+        "foot_image_left_center": [
+          561.0,
+          1045.0
+        ],
+        "foot_image_right_center": [
+          955.0,
+          1017.0
+        ],
+        "tail_tip": [
+          227.0,
+          838.0
+        ],
+        "tail_base_visible": [
+          477.0,
+          977.0
+        ],
+        "foot_image_left_main_pad_center": [
+          578.0,
+          1076.0
+        ],
+        "foot_image_right_main_pad_center": [
+          974.0,
+          1052.0
+        ]
+      },
+      "manual_points_normalized": {
+        "eye_image_left_center": [
+          0.414673,
+          0.34689
+        ],
+        "eye_image_right_center": [
+          0.64673,
+          0.277512
+        ],
+        "pupil_image_left_center": [
+          0.422648,
+          0.338915
+        ],
+        "pupil_image_right_center": [
+          0.651515,
+          0.269537
+        ],
+        "nose_center": [
+          0.547847,
+          0.341308
+        ],
+        "mouth_junction": [
+          0.558214,
+          0.385965
+        ],
+        "mouth_image_left_corner": [
+          0.474482,
+          0.407496
+        ],
+        "mouth_image_right_corner": [
+          0.635566,
+          0.354067
+        ],
+        "ear_image_left_center": [
+          0.274322,
+          0.296651
+        ],
+        "ear_image_right_center": [
+          0.685805,
+          0.183413
+        ],
+        "head_top": [
+          0.526316,
+          0.124402
+        ],
+        "chin": [
+          0.475279,
+          0.522329
+        ],
+        "cheek_image_left_center": [
+          0.38437,
+          0.413876
+        ],
+        "cheek_image_right_center": [
+          0.701754,
+          0.318182
+        ],
+        "belly_top_center": [
+          0.603668,
+          0.49362
+        ],
+        "belly_bottom": [
+          0.582935,
+          0.874801
+        ],
+        "foot_image_left_center": [
+          0.447368,
+          0.833333
+        ],
+        "foot_image_right_center": [
+          0.761563,
+          0.811005
+        ],
+        "tail_tip": [
+          0.181021,
+          0.668262
+        ],
+        "tail_base_visible": [
+          0.380383,
+          0.779107
+        ],
+        "foot_image_left_main_pad_center": [
+          0.460925,
+          0.858054
+        ],
+        "foot_image_right_main_pad_center": [
+          0.776715,
+          0.838915
+        ]
+      },
+      "manual_muzzle_top_contour_pixels": [
+        [
+          363.0,
+          568.0
+        ],
+        [
+          403.0,
+          512.0
+        ],
+        [
+          462.0,
+          478.0
+        ],
+        [
+          506.0,
+          476.0
+        ],
+        [
+          561.0,
+          474.0
+        ],
+        [
+          631.0,
+          423.0
+        ],
+        [
+          685.0,
+          389.0
+        ],
+        [
+          746.0,
+          386.0
+        ],
+        [
+          808.0,
+          393.0
+        ],
+        [
+          859.0,
+          359.0
+        ],
+        [
+          900.0,
+          352.0
+        ],
+        [
+          939.0,
+          378.0
+        ]
+      ],
+      "manual_muzzle_top_contour_normalized": [
+        [
+          0.289474,
+          0.452951
+        ],
+        [
+          0.321372,
+          0.408293
+        ],
+        [
+          0.368421,
+          0.38118
+        ],
+        [
+          0.403509,
+          0.379585
+        ],
+        [
+          0.447368,
+          0.37799
+        ],
+        [
+          0.50319,
+          0.337321
+        ],
+        [
+          0.546252,
+          0.310207
+        ],
+        [
+          0.594896,
+          0.307815
+        ],
+        [
+          0.644338,
+          0.313397
+        ],
+        [
+          0.685008,
+          0.286284
+        ],
+        [
+          0.717703,
+          0.280702
+        ],
+        [
+          0.748804,
+          0.301435
+        ]
+      ],
+      "projected_metrics": {
+        "head_width_pixels": 619.0,
+        "head_height_pixels": 502.0,
+        "head_width_to_height": 1.2331,
+        "head_width_to_visible_torso_hips_width": 1.1904,
+        "head_height_to_component_height": 0.4917,
+        "head_height_to_below_chin_visible_height": 1.0308,
+        "eye_center_distance_pixels": 303.727,
+        "eye_center_distance_to_head_width": 0.4907,
+        "eye_line_roll_degrees_image_y_down": -16.645,
+        "image_left_eye_width_to_head_width": 0.1486,
+        "image_right_eye_width_to_head_width": 0.1373,
+        "nose_width_to_head_width": 0.1874,
+        "nose_height_to_head_height": 0.1474,
+        "visible_belly_width_to_torso_hips_width": 0.6327
+      },
+      "pose_note": "Seated with forward soles and image-left hand touching chin. Eyes gaze upward: more white visible below pupils. Eye opening centers and pupil centers are deliberately separate.",
+      "source_unchanged_sha256_check": true
+    },
+    "encourage": {
+      "source_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-encourage.png",
+      "image_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-encourage.png",
+      "width": 1254,
+      "height": 1254,
+      "landmarks": {
+        "eye_image_left_center": [
+          489.0,
+          370.0
+        ],
+        "eye_image_right_center": [
+          797.0,
+          321.0
+        ],
+        "pupil_image_left_center": [
+          494.0,
+          371.0
+        ],
+        "pupil_image_right_center": [
+          792.0,
+          321.0
+        ],
+        "nose_center": [
+          646.0,
+          378.0
+        ],
+        "mouth_junction": [
+          651.0,
+          430.0
+        ],
+        "mouth_image_left_corner": [
+          550.0,
+          440.0
+        ],
+        "mouth_image_right_corner": [
+          751.0,
+          404.0
+        ],
+        "mouth_open_bottom": [
+          658.0,
+          510.0
+        ],
+        "ear_image_left_center": [
+          357.0,
+          286.0
+        ],
+        "ear_image_right_center": [
+          877.0,
+          205.0
+        ],
+        "head_top": [
+          664.0,
+          113.0
+        ],
+        "chin": [
+          604.0,
+          586.0
+        ],
+        "cheek_image_left_center": [
+          442.0,
+          437.0
+        ],
+        "cheek_image_right_center": [
+          855.0,
+          374.0
+        ],
+        "belly_top_center": [
+          682.0,
+          570.0
+        ],
+        "belly_bottom": [
+          695.0,
+          1040.0
+        ],
+        "foot_image_left_center": [
+          478.0,
+          1140.0
+        ],
+        "foot_image_right_center": [
+          867.0,
+          1135.0
+        ],
+        "tail_tip": [
+          227.0,
+          827.0
+        ],
+        "tail_base_visible": [
+          425.0,
+          974.0
+        ],
+        "paw_image_left_main_pad_center": [
+          296.0,
+          575.0
+        ],
+        "paw_image_right_main_pad_center": [
+          995.0,
+          537.0
+        ]
+      },
+      "measurements": {
+        "head_without_ears_tuft_whiskers_aabb_width": {
+          "start": [
+            337.0,
+            349.5
+          ],
+          "end": [
+            946.0,
+            349.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "head_without_ears_tuft_whiskers_aabb_height": {
+          "start": [
+            641.5,
+            112.0
+          ],
+          "end": [
+            641.5,
+            587.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_width": {
+          "start": [
+            449.0,
+            369.5
+          ],
+          "end": [
+            530.0,
+            369.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_left_aabb_height": {
+          "start": [
+            489.5,
+            331.0
+          ],
+          "end": [
+            489.5,
+            408.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_width": {
+          "start": [
+            757.0,
+            320.5
+          ],
+          "end": [
+            835.0,
+            320.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_image_right_aabb_height": {
+          "start": [
+            796.0,
+            280.0
+          ],
+          "end": [
+            796.0,
+            361.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_width": {
+          "start": [
+            287.0,
+            287.0
+          ],
+          "end": [
+            425.0,
+            287.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_outer_aabb_height": {
+          "start": [
+            356.0,
+            210.0
+          ],
+          "end": [
+            356.0,
+            364.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_width": {
+          "start": [
+            810.0,
+            205.5
+          ],
+          "end": [
+            945.0,
+            205.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_outer_aabb_height": {
+          "start": [
+            877.5,
+            134.0
+          ],
+          "end": [
+            877.5,
+            277.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_width": {
+          "start": [
+            326.0,
+            290.5
+          ],
+          "end": [
+            388.0,
+            290.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_left_inner_aabb_height": {
+          "start": [
+            357.0,
+            254.0
+          ],
+          "end": [
+            357.0,
+            327.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_width": {
+          "start": [
+            843.0,
+            213.0
+          ],
+          "end": [
+            911.0,
+            213.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "ear_image_right_inner_aabb_height": {
+          "start": [
+            877.0,
+            175.0
+          ],
+          "end": [
+            877.0,
+            251.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_width": {
+          "start": [
+            590.0,
+            378.0
+          ],
+          "end": [
+            701.0,
+            378.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "nose_aabb_height": {
+          "start": [
+            645.5,
+            344.0
+          ],
+          "end": [
+            645.5,
+            412.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_width": {
+          "start": [
+            345.0,
+            457.5
+          ],
+          "end": [
+            945.0,
+            457.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "muzzle_aabb_height": {
+          "start": [
+            645.0,
+            328.0
+          ],
+          "end": [
+            645.0,
+            587.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_width": {
+          "start": [
+            521.0,
+            800.0
+          ],
+          "end": [
+            862.0,
+            800.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "belly_visible_aabb_height": {
+          "start": [
+            691.5,
+            558.0
+          ],
+          "end": [
+            691.5,
+            1042.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_width": {
+          "start": [
+            418.0,
+            839.5
+          ],
+          "end": [
+            926.0,
+            839.5
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "torso_hips_visible_aabb_height": {
+          "start": [
+            672.0,
+            574.0
+          ],
+          "end": [
+            672.0,
+            1105.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_width": {
+          "start": [
+            374.0,
+            1139.0
+          ],
+          "end": [
+            579.0,
+            1139.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_left_aabb_height": {
+          "start": [
+            476.5,
+            1088.0
+          ],
+          "end": [
+            476.5,
+            1190.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_width": {
+          "start": [
+            758.0,
+            1131.0
+          ],
+          "end": [
+            973.0,
+            1131.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "foot_image_right_aabb_height": {
+          "start": [
+            865.5,
+            1082.0
+          ],
+          "end": [
+            865.5,
+            1180.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_width": {
+          "start": [
+            204.0,
+            947.0
+          ],
+          "end": [
+            443.0,
+            947.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tail_visible_aabb_height": {
+          "start": [
+            323.5,
+            823.0
+          ],
+          "end": [
+            323.5,
+            1071.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_width": {
+          "start": [
+            526.0,
+            111.0
+          ],
+          "end": [
+            671.0,
+            111.0
+          ],
+          "method": "manual anatomical AABB width; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "tuft_aabb_height": {
+          "start": [
+            598.5,
+            72.0
+          ],
+          "end": [
+            598.5,
+            150.0
+          ],
+          "method": "manual anatomical AABB height; endpoints are projection construction points, not anatomical landmarks"
+        },
+        "eye_center_distance": {
+          "start": [
+            489.0,
+            370.0
+          ],
+          "end": [
+            797.0,
+            321.0
+          ],
+          "method": "Euclidean distance between manually annotated eye opening centers"
+        }
+      },
+      "source_sha256": "5a50c471820629593159f5a0ee3621f9d56df60b0ae815936ef34711f55337b6",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_any_bbox": [
+        0,
+        33,
+        1224,
+        1228
+      ],
+      "source_alpha128_bbox": [
+        206,
+        73,
+        1075,
+        1188
+      ],
+      "largest_alpha128_component_bbox": [
+        206,
+        73,
+        1075,
+        1188
+      ],
+      "largest_alpha128_component_bbox_normalized": [
+        0.164274,
+        0.058214,
+        0.857257,
+        0.947368
+      ],
+      "largest_alpha128_component_area_pixels": 603683,
+      "manual_boxes_pixels": {
+        "head_without_ears_tuft_whiskers": [
+          337.0,
+          112.0,
+          946.0,
+          587.0
+        ],
+        "eye_image_left": [
+          449.0,
+          331.0,
+          530.0,
+          408.0
+        ],
+        "eye_image_right": [
+          757.0,
+          280.0,
+          835.0,
+          361.0
+        ],
+        "ear_image_left_outer": [
+          287.0,
+          210.0,
+          425.0,
+          364.0
+        ],
+        "ear_image_right_outer": [
+          810.0,
+          134.0,
+          945.0,
+          277.0
+        ],
+        "ear_image_left_inner": [
+          326.0,
+          254.0,
+          388.0,
+          327.0
+        ],
+        "ear_image_right_inner": [
+          843.0,
+          175.0,
+          911.0,
+          251.0
+        ],
+        "nose": [
+          590.0,
+          344.0,
+          701.0,
+          412.0
+        ],
+        "muzzle": [
+          345.0,
+          328.0,
+          945.0,
+          587.0
+        ],
+        "belly_visible": [
+          521.0,
+          558.0,
+          862.0,
+          1042.0
+        ],
+        "torso_hips_visible": [
+          418.0,
+          574.0,
+          926.0,
+          1105.0
+        ],
+        "foot_image_left": [
+          374.0,
+          1088.0,
+          579.0,
+          1190.0
+        ],
+        "foot_image_right": [
+          758.0,
+          1082.0,
+          973.0,
+          1180.0
+        ],
+        "tail_visible": [
+          204.0,
+          823.0,
+          443.0,
+          1071.0
+        ],
+        "tuft": [
+          526.0,
+          72.0,
+          671.0,
+          150.0
+        ]
+      },
+      "manual_boxes_normalized": {
+        "head_without_ears_tuft_whiskers": [
+          0.26874,
+          0.089314,
+          0.754386,
+          0.468102
+        ],
+        "eye_image_left": [
+          0.358054,
+          0.263955,
+          0.422648,
+          0.325359
+        ],
+        "eye_image_right": [
+          0.603668,
+          0.223285,
+          0.665869,
+          0.287879
+        ],
+        "ear_image_left_outer": [
+          0.228868,
+          0.167464,
+          0.338915,
+          0.290271
+        ],
+        "ear_image_right_outer": [
+          0.645933,
+          0.106858,
+          0.753589,
+          0.220893
+        ],
+        "ear_image_left_inner": [
+          0.259968,
+          0.202552,
+          0.30941,
+          0.260766
+        ],
+        "ear_image_right_inner": [
+          0.672249,
+          0.139553,
+          0.726475,
+          0.200159
+        ],
+        "nose": [
+          0.470494,
+          0.274322,
+          0.559011,
+          0.328549
+        ],
+        "muzzle": [
+          0.27512,
+          0.261563,
+          0.753589,
+          0.468102
+        ],
+        "belly_visible": [
+          0.41547,
+          0.444976,
+          0.6874,
+          0.830941
+        ],
+        "torso_hips_visible": [
+          0.333333,
+          0.457735,
+          0.738437,
+          0.88118
+        ],
+        "foot_image_left": [
+          0.298246,
+          0.867624,
+          0.461722,
+          0.948963
+        ],
+        "foot_image_right": [
+          0.604466,
+          0.862839,
+          0.775917,
+          0.940989
+        ],
+        "tail_visible": [
+          0.162679,
+          0.6563,
+          0.35327,
+          0.854067
+        ],
+        "tuft": [
+          0.419458,
+          0.057416,
+          0.535088,
+          0.119617
+        ]
+      },
+      "manual_points_pixels": {
+        "eye_image_left_center": [
+          489.0,
+          370.0
+        ],
+        "eye_image_right_center": [
+          797.0,
+          321.0
+        ],
+        "pupil_image_left_center": [
+          494.0,
+          371.0
+        ],
+        "pupil_image_right_center": [
+          792.0,
+          321.0
+        ],
+        "nose_center": [
+          646.0,
+          378.0
+        ],
+        "mouth_junction": [
+          651.0,
+          430.0
+        ],
+        "mouth_image_left_corner": [
+          550.0,
+          440.0
+        ],
+        "mouth_image_right_corner": [
+          751.0,
+          404.0
+        ],
+        "mouth_open_bottom": [
+          658.0,
+          510.0
+        ],
+        "ear_image_left_center": [
+          357.0,
+          286.0
+        ],
+        "ear_image_right_center": [
+          877.0,
+          205.0
+        ],
+        "head_top": [
+          664.0,
+          113.0
+        ],
+        "chin": [
+          604.0,
+          586.0
+        ],
+        "cheek_image_left_center": [
+          442.0,
+          437.0
+        ],
+        "cheek_image_right_center": [
+          855.0,
+          374.0
+        ],
+        "belly_top_center": [
+          682.0,
+          570.0
+        ],
+        "belly_bottom": [
+          695.0,
+          1040.0
+        ],
+        "foot_image_left_center": [
+          478.0,
+          1140.0
+        ],
+        "foot_image_right_center": [
+          867.0,
+          1135.0
+        ],
+        "tail_tip": [
+          227.0,
+          827.0
+        ],
+        "tail_base_visible": [
+          425.0,
+          974.0
+        ],
+        "paw_image_left_main_pad_center": [
+          296.0,
+          575.0
+        ],
+        "paw_image_right_main_pad_center": [
+          995.0,
+          537.0
+        ]
+      },
+      "manual_points_normalized": {
+        "eye_image_left_center": [
+          0.389952,
+          0.295056
+        ],
+        "eye_image_right_center": [
+          0.635566,
+          0.255981
+        ],
+        "pupil_image_left_center": [
+          0.393939,
+          0.295853
+        ],
+        "pupil_image_right_center": [
+          0.631579,
+          0.255981
+        ],
+        "nose_center": [
+          0.515152,
+          0.301435
+        ],
+        "mouth_junction": [
+          0.519139,
+          0.342903
+        ],
+        "mouth_image_left_corner": [
+          0.438596,
+          0.350877
+        ],
+        "mouth_image_right_corner": [
+          0.598884,
+          0.322169
+        ],
+        "mouth_open_bottom": [
+          0.524721,
+          0.406699
+        ],
+        "ear_image_left_center": [
+          0.284689,
+          0.22807
+        ],
+        "ear_image_right_center": [
+          0.699362,
+          0.163477
+        ],
+        "head_top": [
+          0.529506,
+          0.090112
+        ],
+        "chin": [
+          0.481659,
+          0.467305
+        ],
+        "cheek_image_left_center": [
+          0.352472,
+          0.348485
+        ],
+        "cheek_image_right_center": [
+          0.681818,
+          0.298246
+        ],
+        "belly_top_center": [
+          0.54386,
+          0.454545
+        ],
+        "belly_bottom": [
+          0.554226,
+          0.829346
+        ],
+        "foot_image_left_center": [
+          0.38118,
+          0.909091
+        ],
+        "foot_image_right_center": [
+          0.691388,
+          0.905104
+        ],
+        "tail_tip": [
+          0.181021,
+          0.65949
+        ],
+        "tail_base_visible": [
+          0.338915,
+          0.776715
+        ],
+        "paw_image_left_main_pad_center": [
+          0.236045,
+          0.458533
+        ],
+        "paw_image_right_main_pad_center": [
+          0.793461,
+          0.42823
+        ]
+      },
+      "manual_muzzle_top_contour_pixels": [
+        [
+          346.0,
+          453.0
+        ],
+        [
+          372.0,
+          417.0
+        ],
+        [
+          418.0,
+          396.0
+        ],
+        [
+          466.0,
+          395.0
+        ],
+        [
+          510.0,
+          400.0
+        ],
+        [
+          579.0,
+          356.0
+        ],
+        [
+          643.0,
+          343.0
+        ],
+        [
+          701.0,
+          343.0
+        ],
+        [
+          758.0,
+          361.0
+        ],
+        [
+          814.0,
+          334.0
+        ],
+        [
+          853.0,
+          328.0
+        ],
+        [
+          903.0,
+          345.0
+        ],
+        [
+          937.0,
+          373.0
+        ]
+      ],
+      "manual_muzzle_top_contour_normalized": [
+        [
+          0.275917,
+          0.361244
+        ],
+        [
+          0.296651,
+          0.332536
+        ],
+        [
+          0.333333,
+          0.315789
+        ],
+        [
+          0.371611,
+          0.314992
+        ],
+        [
+          0.406699,
+          0.318979
+        ],
+        [
+          0.461722,
+          0.283892
+        ],
+        [
+          0.512759,
+          0.273525
+        ],
+        [
+          0.559011,
+          0.273525
+        ],
+        [
+          0.604466,
+          0.287879
+        ],
+        [
+          0.649123,
+          0.266348
+        ],
+        [
+          0.680223,
+          0.261563
+        ],
+        [
+          0.720096,
+          0.27512
+        ],
+        [
+          0.747209,
+          0.297448
+        ]
+      ],
+      "projected_metrics": {
+        "head_width_pixels": 609.0,
+        "head_height_pixels": 475.0,
+        "head_width_to_height": 1.2821,
+        "head_width_to_visible_torso_hips_width": 1.1988,
+        "head_height_to_component_height": 0.426,
+        "head_height_to_below_chin_visible_height": 0.7903,
+        "eye_center_distance_pixels": 311.873,
+        "eye_center_distance_to_head_width": 0.5121,
+        "eye_line_roll_degrees_image_y_down": -9.039,
+        "image_left_eye_width_to_head_width": 0.133,
+        "image_right_eye_width_to_head_width": 0.1281,
+        "nose_width_to_head_width": 0.1823,
+        "nose_height_to_head_height": 0.1432,
+        "visible_belly_width_to_torso_hips_width": 0.6713
+      },
+      "pose_note": "Standing, both arms raised and mouth open. Both visible palms show two small toe pads plus main pad. Mouth opening changes expression, not the muzzle volume.",
+      "source_unchanged_sha256_check": true
+    }
+  },
+  "missing_files": []
+}

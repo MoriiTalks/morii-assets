@@ -1,0 +1,19 @@
+{
+  "stage": "recovered-01",
+  "verified": "Saved Blender candidate, matching active MCP scene and 501x501 wave study",
+  "completed": [
+    "five original references and annotations",
+    "existing implementation audit",
+    "candidate custom head and continuous-body mesh",
+    "UV pigment masks",
+    "15-bone static pose rig",
+    "six validation self-tests"
+  ],
+  "incomplete": [
+    "final limb/tail correction",
+    "five full-resolution pose renders",
+    "candidate annotations",
+    "five-pose metrics and approval"
+  ],
+  "applicationAssetsReplaced": false
+}

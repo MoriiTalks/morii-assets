@@ -1,0 +1,565 @@
+{
+  "schema_version": 1,
+  "pass": false,
+  "limits": {
+    "iou": 0.93,
+    "facial": 0.02,
+    "dimensions": 0.03
+  },
+  "policy": {
+    "coordinate_system": "pixel_xy_top_left",
+    "metric_transform": "identity",
+    "primary_alpha": 32,
+    "facial_denominator": "reference largest 8-connected alpha>=32 component bbox height",
+    "overlay": "source-over, each alpha times 0.5"
+  },
+  "annotation_provenance": {
+    "reference": "Human visual estimates on complete source PNGs at 1254 x 1254; annotated derivatives visually checked against source anatomy. No model-generated landmarks. No image warping.",
+    "candidate": "Independent manual visual annotation of actual saved Blender render; no correspondence prediction and no geometry-projected labels."
+  },
+  "annotation_uncertainty_px": {
+    "reference": 8,
+    "candidate": 8
+  },
+  "annotation_files": {
+    "reference": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\reference\\morii-manual-landmarks.json",
+    "candidate": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\checkpoints\\recovered-01\\wave-landmarks.json"
+  },
+  "errors": [],
+  "poses": {
+    "wave": {
+      "pose": "wave",
+      "pass": false,
+      "errors": [
+        "Unverified candidate visual feature: tail_full_visible_extent: The image-left tapered tail is identifiable and annotated, but an additional cream flap between the legs cannot be confidently assigned to tail, belly, or another mesh from this view. Tail AABB measurements cover only the clearly identifiable image-left region; complete tail extent remains unverified."
+      ],
+      "reference_canvas": [
+        1254,
+        1254
+      ],
+      "candidate_canvas": [
+        1254,
+        1254
+      ],
+      "reference_raw_bbox_alpha32": [
+        220,
+        101,
+        1039,
+        1164
+      ],
+      "candidate_raw_bbox_alpha32": [
+        228,
+        109,
+        1011,
+        1159
+      ],
+      "reference_largest_component_bbox_alpha32": [
+        220,
+        101,
+        1039,
+        1164
+      ],
+      "candidate_largest_component_bbox_alpha32": [
+        228,
+        109,
+        1011,
+        1159
+      ],
+      "reference_largest_component_bbox_alpha128": [
+        221,
+        102,
+        1038,
+        1163
+      ],
+      "candidate_largest_component_bbox_alpha128": [
+        229,
+        109,
+        1010,
+        1158
+      ],
+      "iou_by_alpha_threshold": {
+        "1": 0.8960799293033587,
+        "16": 0.899173465362595,
+        "32": 0.8990126642560096,
+        "64": 0.8986317936465963,
+        "128": 0.8981120322719386,
+        "224": 0.8973531394686165
+      },
+      "iou": 0.8990126642560096,
+      "iou_pass": false,
+      "facial_landmarks": {
+        "eye_image_left_center": {
+          "dx_px": -1.0,
+          "dy_px": 2.0,
+          "distance_px": 2.23606797749979,
+          "normalized_by_reference_height": 0.002103544663687479,
+          "pass": true
+        },
+        "eye_image_right_center": {
+          "dx_px": 1.0,
+          "dy_px": 2.0,
+          "distance_px": 2.23606797749979,
+          "normalized_by_reference_height": 0.002103544663687479,
+          "pass": true
+        },
+        "pupil_image_left_center": {
+          "dx_px": -4.0,
+          "dy_px": 0.0,
+          "distance_px": 4.0,
+          "normalized_by_reference_height": 0.0037629350893697085,
+          "pass": true
+        },
+        "pupil_image_right_center": {
+          "dx_px": 3.0,
+          "dy_px": 0.0,
+          "distance_px": 3.0,
+          "normalized_by_reference_height": 0.0028222013170272815,
+          "pass": true
+        },
+        "nose_center": {
+          "dx_px": -3.0,
+          "dy_px": -1.0,
+          "distance_px": 3.1622776601683795,
+          "normalized_by_reference_height": 0.0029748613924443835,
+          "pass": true
+        },
+        "mouth_junction": {
+          "dx_px": -4.0,
+          "dy_px": 1.0,
+          "distance_px": 4.123105625617661,
+          "normalized_by_reference_height": 0.0038787447089535846,
+          "pass": true
+        },
+        "mouth_image_left_corner": {
+          "dx_px": -2.0,
+          "dy_px": 3.0,
+          "distance_px": 3.605551275463989,
+          "normalized_by_reference_height": 0.003391863852741288,
+          "pass": true
+        },
+        "mouth_image_right_corner": {
+          "dx_px": -4.0,
+          "dy_px": 1.0,
+          "distance_px": 4.123105625617661,
+          "normalized_by_reference_height": 0.0038787447089535846,
+          "pass": true
+        },
+        "cheek_image_left_center": {
+          "dx_px": 13.0,
+          "dy_px": 28.0,
+          "distance_px": 30.870698080866262,
+          "normalized_by_reference_height": 0.029041108260457443,
+          "pass": false
+        },
+        "cheek_image_right_center": {
+          "dx_px": 1.0,
+          "dy_px": 29.0,
+          "distance_px": 29.017236257093817,
+          "normalized_by_reference_height": 0.027297494127087315,
+          "pass": false
+        }
+      },
+      "major_dimensions": {
+        "head_without_ears_tuft_whiskers_aabb_width": {
+          "reference_px": 581.0,
+          "candidate_px": 601.0,
+          "candidate_to_reference": 1.0344234079173837,
+          "relative_error": 0.03442340791738374,
+          "reference_over_height": 0.5465663217309501,
+          "candidate_over_height": 0.5723809523809524,
+          "pass": false
+        },
+        "head_without_ears_tuft_whiskers_aabb_height": {
+          "reference_px": 465.0,
+          "candidate_px": 459.0,
+          "candidate_to_reference": 0.9870967741935484,
+          "relative_error": 0.012903225806451646,
+          "reference_over_height": 0.4374412041392286,
+          "candidate_over_height": 0.43714285714285717,
+          "pass": true
+        },
+        "torso_hips_visible_aabb_width": {
+          "reference_px": 472.0,
+          "candidate_px": 438.0,
+          "candidate_to_reference": 0.9279661016949152,
+          "relative_error": 0.07203389830508478,
+          "reference_over_height": 0.44402634054562556,
+          "candidate_over_height": 0.41714285714285715,
+          "pass": false
+        },
+        "torso_hips_visible_aabb_height": {
+          "reference_px": 516.0,
+          "candidate_px": 514.0,
+          "candidate_to_reference": 0.9961240310077519,
+          "relative_error": 0.003875968992248069,
+          "reference_over_height": 0.4854186265286924,
+          "candidate_over_height": 0.4895238095238095,
+          "pass": true
+        },
+        "ear_image_left_outer_aabb_width": {
+          "reference_px": 138.0,
+          "candidate_px": 108.0,
+          "candidate_to_reference": 0.782608695652174,
+          "relative_error": 0.21739130434782605,
+          "reference_over_height": 0.12982126058325494,
+          "candidate_over_height": 0.10285714285714286,
+          "pass": false
+        },
+        "ear_image_left_outer_aabb_height": {
+          "reference_px": 150.0,
+          "candidate_px": 137.0,
+          "candidate_to_reference": 0.9133333333333333,
+          "relative_error": 0.08666666666666667,
+          "reference_over_height": 0.14111006585136407,
+          "candidate_over_height": 0.13047619047619047,
+          "pass": false
+        },
+        "ear_image_right_outer_aabb_width": {
+          "reference_px": 122.0,
+          "candidate_px": 117.0,
+          "candidate_to_reference": 0.9590163934426229,
+          "relative_error": 0.040983606557377095,
+          "reference_over_height": 0.1147695202257761,
+          "candidate_over_height": 0.11142857142857143,
+          "pass": false
+        },
+        "ear_image_right_outer_aabb_height": {
+          "reference_px": 132.0,
+          "candidate_px": 127.0,
+          "candidate_to_reference": 0.9621212121212122,
+          "relative_error": 0.037878787878787845,
+          "reference_over_height": 0.12417685794920037,
+          "candidate_over_height": 0.12095238095238095,
+          "pass": false
+        },
+        "belly_visible_aabb_width": {
+          "reference_px": 321.0,
+          "candidate_px": 337.0,
+          "candidate_to_reference": 1.0498442367601246,
+          "relative_error": 0.049844236760124616,
+          "reference_over_height": 0.3019755409219191,
+          "candidate_over_height": 0.32095238095238093,
+          "pass": false
+        },
+        "belly_visible_aabb_height": {
+          "reference_px": 476.0,
+          "candidate_px": 435.0,
+          "candidate_to_reference": 0.9138655462184874,
+          "relative_error": 0.08613445378151263,
+          "reference_over_height": 0.4477892756349953,
+          "candidate_over_height": 0.4142857142857143,
+          "pass": false
+        },
+        "foot_image_left_aabb_width": {
+          "reference_px": 191.0,
+          "candidate_px": 186.0,
+          "candidate_to_reference": 0.9738219895287958,
+          "relative_error": 0.02617801047120416,
+          "reference_over_height": 0.17968015051740358,
+          "candidate_over_height": 0.17714285714285713,
+          "pass": true
+        },
+        "foot_image_left_aabb_height": {
+          "reference_px": 96.0,
+          "candidate_px": 73.0,
+          "candidate_to_reference": 0.7604166666666666,
+          "relative_error": 0.23958333333333337,
+          "reference_over_height": 0.09031044214487301,
+          "candidate_over_height": 0.06952380952380953,
+          "pass": false
+        },
+        "foot_image_right_aabb_width": {
+          "reference_px": 202.0,
+          "candidate_px": 189.0,
+          "candidate_to_reference": 0.9356435643564357,
+          "relative_error": 0.0643564356435643,
+          "reference_over_height": 0.19002822201317027,
+          "candidate_over_height": 0.18,
+          "pass": false
+        },
+        "foot_image_right_aabb_height": {
+          "reference_px": 91.0,
+          "candidate_px": 75.0,
+          "candidate_to_reference": 0.8241758241758241,
+          "relative_error": 0.17582417582417587,
+          "reference_over_height": 0.08560677328316087,
+          "candidate_over_height": 0.07142857142857142,
+          "pass": false
+        },
+        "tail_visible_aabb_width": {
+          "reference_px": 245.0,
+          "candidate_px": 240.0,
+          "candidate_to_reference": 0.9795918367346939,
+          "relative_error": 0.020408163265306145,
+          "reference_over_height": 0.23047977422389465,
+          "candidate_over_height": 0.22857142857142856,
+          "pass": true
+        },
+        "tail_visible_aabb_height": {
+          "reference_px": 223.0,
+          "candidate_px": 230.0,
+          "candidate_to_reference": 1.031390134529148,
+          "relative_error": 0.03139013452914807,
+          "reference_over_height": 0.20978363123236124,
+          "candidate_over_height": 0.21904761904761905,
+          "pass": false
+        },
+        "eye_center_distance": {
+          "reference_px": 303.40237309553135,
+          "candidate_px": 305.366992322353,
+          "candidate_to_reference": 1.0064752928817833,
+          "relative_error": 0.006475292881783279,
+          "reference_over_height": 0.28542085897980374,
+          "candidate_over_height": 0.2908257069736695,
+          "pass": true
+        }
+      },
+      "dimension_ratios": {
+        "head_without_ears_tuft_whiskers_aspect": {
+          "reference": 1.249462365591398,
+          "candidate": 1.3093681917211328,
+          "relative_error": 0.047945282530682976,
+          "pass": false
+        },
+        "torso_hips_visible_aspect": {
+          "reference": 0.9147286821705426,
+          "candidate": 0.8521400778210116,
+          "relative_error": 0.06842313526347032,
+          "pass": false
+        },
+        "ear_image_left_outer_aspect": {
+          "reference": 0.92,
+          "candidate": 0.7883211678832117,
+          "relative_error": 0.14312916534433517,
+          "pass": false
+        },
+        "ear_image_right_outer_aspect": {
+          "reference": 0.9242424242424242,
+          "candidate": 0.9212598425196851,
+          "relative_error": 0.0032270556344390355,
+          "pass": true
+        },
+        "belly_visible_aspect": {
+          "reference": 0.6743697478991597,
+          "candidate": 0.774712643678161,
+          "relative_error": 0.1487950728685501,
+          "pass": false
+        },
+        "foot_image_left_aspect": {
+          "reference": 1.9895833333333333,
+          "candidate": 2.547945205479452,
+          "relative_error": 0.28064261636663557,
+          "pass": false
+        },
+        "foot_image_right_aspect": {
+          "reference": 2.21978021978022,
+          "candidate": 2.52,
+          "relative_error": 0.13524752475247515,
+          "pass": false
+        },
+        "tail_visible_aspect": {
+          "reference": 1.0986547085201794,
+          "candidate": 1.0434782608695652,
+          "relative_error": 0.05022182786157947,
+          "pass": false
+        },
+        "head_to_torso_width": {
+          "reference": 1.2309322033898304,
+          "candidate": 1.3721461187214612,
+          "relative_error": 0.11472111538129037,
+          "pass": false
+        },
+        "head_to_torso_height": {
+          "reference": 0.9011627906976745,
+          "candidate": 0.8929961089494164,
+          "relative_error": 0.009062382327099328,
+          "pass": true
+        },
+        "eye_separation_to_head_width": {
+          "reference": 0.5222071826084876,
+          "candidate": 0.508098156942351,
+          "relative_error": 0.027018061290655426,
+          "pass": true
+        },
+        "belly_to_torso_width": {
+          "reference": 0.6800847457627118,
+          "candidate": 0.769406392694064,
+          "relative_error": 0.13133899486479184,
+          "pass": false
+        }
+      },
+      "annotation_errors": [],
+      "facial_pass": false,
+      "dimensions_pass": false,
+      "annotation_image_binding": {
+        "reference": {
+          "expected_sha256": "a8777a1673c8f8764ba05ddbf118b4cdaca4361364e716d2ed954216a6a69672",
+          "actual_sha256": "a8777a1673c8f8764ba05ddbf118b4cdaca4361364e716d2ed954216a6a69672",
+          "pass": true
+        },
+        "candidate": {
+          "expected_sha256": "8279f3a806cd3b95fd05d317ad6152e94a5525ce2007063f3607a2050222e741",
+          "actual_sha256": "8279f3a806cd3b95fd05d317ad6152e94a5525ce2007063f3607a2050222e741",
+          "pass": true
+        }
+      },
+      "unverified_features": [
+        {
+          "name": "tail_full_visible_extent",
+          "reason": "The image-left tapered tail is identifiable and annotated, but an additional cream flap between the legs cannot be confidently assigned to tail, belly, or another mesh from this view. Tail AABB measurements cover only the clearly identifiable image-left region; complete tail extent remains unverified.",
+          "ambiguous_region_pixels": [
+            595,
+            1022,
+            679,
+            1100
+          ]
+        }
+      ],
+      "evidence_pass": false
+    },
+    "listen": {
+      "pose": "listen",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\listen.png",
+        "candidate annotation source_sha256 is missing or does not match the current PNG; annotations may be stale"
+      ],
+      "annotation_image_binding": {
+        "reference": {
+          "expected_sha256": "de15c999ac7ed4260ffd0e38d0e6440d4d5852bc4ed43785d2a2c8bf7eba0d91",
+          "actual_sha256": "de15c999ac7ed4260ffd0e38d0e6440d4d5852bc4ed43785d2a2c8bf7eba0d91",
+          "pass": true
+        },
+        "candidate": {
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "pass": false
+        }
+      },
+      "unverified_features": [],
+      "evidence_pass": false
+    },
+    "explain": {
+      "pose": "explain",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\explain.png",
+        "candidate annotation source_sha256 is missing or does not match the current PNG; annotations may be stale"
+      ],
+      "annotation_image_binding": {
+        "reference": {
+          "expected_sha256": "fa15eba07686b0e2ba87a0780695d2b3ebc371f19f30e75f79a44d7e60a3a4e3",
+          "actual_sha256": "fa15eba07686b0e2ba87a0780695d2b3ebc371f19f30e75f79a44d7e60a3a4e3",
+          "pass": true
+        },
+        "candidate": {
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "pass": false
+        }
+      },
+      "unverified_features": [],
+      "evidence_pass": false
+    },
+    "think": {
+      "pose": "think",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\think.png",
+        "candidate annotation source_sha256 is missing or does not match the current PNG; annotations may be stale"
+      ],
+      "annotation_image_binding": {
+        "reference": {
+          "expected_sha256": "999795bfb2c8d647204bdf75c76df0290db403de0a89dcd501e8272a97e73218",
+          "actual_sha256": "999795bfb2c8d647204bdf75c76df0290db403de0a89dcd501e8272a97e73218",
+          "pass": true
+        },
+        "candidate": {
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "pass": false
+        }
+      },
+      "unverified_features": [],
+      "evidence_pass": false
+    },
+    "encourage": {
+      "pose": "encourage",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\encourage.png",
+        "candidate annotation source_sha256 is missing or does not match the current PNG; annotations may be stale"
+      ],
+      "annotation_image_binding": {
+        "reference": {
+          "expected_sha256": "5a50c471820629593159f5a0ee3621f9d56df60b0ae815936ef34711f55337b6",
+          "actual_sha256": "5a50c471820629593159f5a0ee3621f9d56df60b0ae815936ef34711f55337b6",
+          "pass": true
+        },
+        "candidate": {
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "pass": false
+        }
+      },
+      "unverified_features": [],
+      "evidence_pass": false
+    }
+  },
+  "source_files": {
+    "wave": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-wave.png",
+        "sha256": "a8777a1673c8f8764ba05ddbf118b4cdaca4361364e716d2ed954216a6a69672"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\wave-before-correction.png",
+        "sha256": "8279f3a806cd3b95fd05d317ad6152e94a5525ce2007063f3607a2050222e741"
+      }
+    },
+    "listen": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-listen.png",
+        "sha256": "de15c999ac7ed4260ffd0e38d0e6440d4d5852bc4ed43785d2a2c8bf7eba0d91"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\listen.png",
+        "sha256": null
+      }
+    },
+    "explain": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-explain.png",
+        "sha256": "fa15eba07686b0e2ba87a0780695d2b3ebc371f19f30e75f79a44d7e60a3a4e3"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\explain.png",
+        "sha256": null
+      }
+    },
+    "think": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-think.png",
+        "sha256": "999795bfb2c8d647204bdf75c76df0290db403de0a89dcd501e8272a97e73218"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\think.png",
+        "sha256": null
+      }
+    },
+    "encourage": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-encourage.png",
+        "sha256": "5a50c471820629593159f5a0ee3621f9d56df60b0ae815936ef34711f55337b6"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\encourage.png",
+        "sha256": null
+      }
+    }
+  }
+}

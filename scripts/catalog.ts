@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 import { type Catalog, parseCatalog } from '../src/catalog.ts';
 import { validatePNG } from './png.ts';
+import { validateGLB } from './glb.ts';
 
 export const repositoryRoot = fileURLToPath(new URL('../', import.meta.url));
 
@@ -23,7 +24,16 @@ export async function validateCatalog(value: unknown, root = repositoryRoot): Pr
     }
     const info = await stat(file);
     if (!info.isFile() || info.size === 0) throw new Error(`Empty or invalid export: ${asset.id}`);
-    validatePNG(await readFile(file), asset.id);
+    const bytes = await readFile(file);
+    if (asset.path.endsWith('.glb')) validateGLB(bytes, asset.id);
+    else validatePNG(bytes, asset.id);
+    if (asset.preview !== undefined) {
+      const preview = await realpath(resolve(root, asset.preview));
+      if (!preview.startsWith(exportsRoot + sep)) {
+        throw new Error(`Preview escapes the repository: ${asset.id}`);
+      }
+      validatePNG(await readFile(preview), asset.id);
+    }
   }
 
   return catalog;

@@ -2,6 +2,7 @@ export interface Asset {
   readonly id: string;
   readonly name: string;
   readonly path: string;
+  readonly preview?: string;
   readonly role: 'mascot' | 'brand';
   readonly status: 'concept-reference' | 'production-ready';
 }
@@ -35,7 +36,7 @@ function parseAsset(value: unknown): Asset {
   const status = data['status'];
 
   if (!/^[a-z][a-z0-9-]*$/.test(id)) throw new Error(`Invalid asset ID: ${id}`);
-  if (!/^exports\/[a-z0-9/-]+\.png$/.test(path)) {
+  if (!/^exports\/[a-z0-9/-]+\.(png|glb)$/.test(path)) {
     throw new Error(`Invalid export path: ${id}`);
   }
   if (role !== 'mascot' && role !== 'brand') throw new Error(`Invalid role: ${id}`);
@@ -43,7 +44,15 @@ function parseAsset(value: unknown): Asset {
     throw new Error(`Invalid status: ${id}`);
   }
 
-  return { id, name, path, role, status };
+  const preview = data['preview'];
+  if (preview === undefined) {
+    if (path.endsWith('.glb')) throw new Error(`Missing model preview: ${id}`);
+    return { id, name, path, role, status };
+  }
+  if (typeof preview !== 'string' || !/^exports\/[a-z0-9/-]+\.png$/.test(preview)) {
+    throw new Error(`Invalid model preview: ${id}`);
+  }
+  return { id, name, path, preview, role, status };
 }
 
 export function parseCatalog(value: unknown): Catalog {

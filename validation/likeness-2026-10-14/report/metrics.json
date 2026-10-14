@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "pass": false,
+  "limits": {
+    "iou": 0.93,
+    "facial": 0.02,
+    "dimensions": 0.03
+  },
+  "policy": {
+    "coordinate_system": "pixel_xy_top_left",
+    "metric_transform": "identity",
+    "primary_alpha": 32,
+    "facial_denominator": "reference largest 8-connected alpha>=32 component bbox height",
+    "overlay": "source-over, each alpha times 0.5"
+  },
+  "annotation_provenance": {
+    "reference": "Human visual estimates on complete source PNGs at 1254 x 1254; annotated derivatives visually checked against source anatomy. No model-generated landmarks. No image warping.",
+    "candidate": null
+  },
+  "annotation_uncertainty_px": {
+    "reference": 8,
+    "candidate": null
+  },
+  "annotation_files": {
+    "reference": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\reference\\morii-manual-landmarks.json",
+    "candidate": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\landmarks.json"
+  },
+  "errors": [
+    "Missing landmark file: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\landmarks.json"
+  ],
+  "poses": {
+    "wave": {
+      "pose": "wave",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\wave.png"
+      ]
+    },
+    "listen": {
+      "pose": "listen",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\listen.png"
+      ]
+    },
+    "explain": {
+      "pose": "explain",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\explain.png"
+      ]
+    },
+    "think": {
+      "pose": "think",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\think.png"
+      ]
+    },
+    "encourage": {
+      "pose": "encourage",
+      "pass": false,
+      "errors": [
+        "Both original reference and genuine candidate render are required",
+        "Missing image: C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\encourage.png"
+      ]
+    }
+  },
+  "source_files": {
+    "wave": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-wave.png",
+        "sha256": "a8777a1673c8f8764ba05ddbf118b4cdaca4361364e716d2ed954216a6a69672"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\wave.png",
+        "sha256": null
+      }
+    },
+    "listen": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-listen.png",
+        "sha256": "de15c999ac7ed4260ffd0e38d0e6440d4d5852bc4ed43785d2a2c8bf7eba0d91"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\listen.png",
+        "sha256": null
+      }
+    },
+    "explain": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-explain.png",
+        "sha256": "fa15eba07686b0e2ba87a0780695d2b3ebc371f19f30e75f79a44d7e60a3a4e3"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\explain.png",
+        "sha256": null
+      }
+    },
+    "think": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-think.png",
+        "sha256": "999795bfb2c8d647204bdf75c76df0290db403de0a89dcd501e8272a97e73218"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\think.png",
+        "sha256": null
+      }
+    },
+    "encourage": {
+      "reference": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\exports\\images\\morii-encourage.png",
+        "sha256": "5a50c471820629593159f5a0ee3621f9d56df60b0ae815936ef34711f55337b6"
+      },
+      "candidate": {
+        "path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\encourage.png",
+        "sha256": null
+      }
+    }
+  },
+  "baseline": {
+    "wave": {
+      "path": "render-output\\morii\\wave.png",
+      "sha256": "b9895671850f535684434022f12302b199944950d68a6d853a890d7cdb6323ea",
+      "error": "Native canvas mismatch (1254, 1254) vs (768, 896); no IoU calculated"
+    },
+    "listen": {
+      "path": "render-output\\morii\\listen.png",
+      "sha256": "8e2013262cd3577d8e0cfad05b96b5ddaff5d4db8c80e384ceaa16583da17224",
+      "error": "Native canvas mismatch (1254, 1254) vs (768, 896); no IoU calculated"
+    },
+    "explain": {
+      "path": "render-output\\morii\\explain.png",
+      "sha256": null,
+      "error": "Missing image: render-output\\morii\\explain.png"
+    },
+    "think": {
+      "path": "render-output\\morii\\think.png",
+      "sha256": "10a0f7a2d54ecb67b3023c97fa6632f99b5e02e700d70ab931ee2e26b68e6fec",
+      "error": "Native canvas mismatch (1254, 1254) vs (768, 896); no IoU calculated"
+    },
+    "encourage": {
+      "path": "render-output\\morii\\encourage.png",
+      "sha256": null,
+      "error": "Missing image: render-output\\morii\\encourage.png"
+    }
+  }
+}

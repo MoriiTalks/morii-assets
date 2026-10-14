@@ -1,6 +1,6 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir, realpath } from 'node:fs/promises';
 import { type IncomingMessage, type ServerResponse, createServer } from 'node:http';
-import { resolve } from 'node:path';
+import { dirname, resolve } from 'node:path';
 
 import { loadCatalog, repositoryRoot } from './catalog.ts';
 
@@ -12,8 +12,21 @@ const files = new Map<string, readonly [string, string]>([
   ['/manifest.json', ['manifest.json', 'application/json; charset=utf-8']],
 ]);
 
+// Only regular bundled modules within dist are served, model loading stays on demand.
+const distributionRoot = await realpath(resolve(repositoryRoot, 'dist'));
+for (const entry of await readdir(distributionRoot, { withFileTypes: true })) {
+  if (!entry.isFile() || !/^[a-zA-Z0-9-]+\.js$/.test(entry.name)) continue;
+  const path = await realpath(resolve(distributionRoot, entry.name));
+  if (dirname(path) !== distributionRoot) throw new Error('Preview module escaped dist');
+  files.set(`/${entry.name}`, [path, 'text/javascript; charset=utf-8']);
+}
+
 for (const asset of catalog.assets) {
-  files.set(`/${asset.path}`, [asset.path, 'image/png']);
+  files.set(`/${asset.path}`, [
+    asset.path,
+    asset.path.endsWith('.glb') ? 'model/gltf-binary' : 'image/png',
+  ]);
+  if (asset.preview !== undefined) files.set(`/${asset.preview}`, [asset.preview, 'image/png']);
 }
 
 const port = Number(process.env['PORT'] ?? 4174);
@@ -52,7 +65,7 @@ async function serve(request: IncomingMessage, response: ServerResponse): Promis
       'Cache-Control': 'no-store',
       'X-Content-Type-Options': 'nosniff',
       'Content-Security-Policy':
-        "default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
+        "default-src 'self'; connect-src 'self' blob:; img-src 'self' blob:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'",
     });
     response.end(request.method === 'HEAD' ? undefined : body);
   } catch (error) {

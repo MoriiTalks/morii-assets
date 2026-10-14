@@ -5,3 +5,4 @@ docs/
 pnpm-lock.yaml
 render-output/
 source/
+exports/models/*.metadata.json

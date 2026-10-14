@@ -1,9 +1,17 @@
 {
   "version": "0.1.0",
   "character": "Morii",
-  "provenance": "AI-assisted concept art from the initial MoriiTalks design exploration. See source/ for prompt references.",
+  "provenance": "Initial AI-assisted concept artwork and a reproducible Blender character rig in source/morii/build.py. Creative approval remains pending.",
   "rights": "Project reference artwork. Redistribution licensing has not been specified.",
   "assets": [
+    {
+      "id": "morii-3d",
+      "name": "Morii animated model",
+      "path": "exports/models/morii.glb",
+      "preview": "exports/images/morii-3d.png",
+      "role": "mascot",
+      "status": "concept-reference"
+    },
     {
       "id": "morii-wave",
       "name": "A friendly hello",

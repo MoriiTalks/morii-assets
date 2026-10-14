@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "coordinate_system": "pixel_xy_top_left",
+  "annotation_method": "Independent manual visual annotation of actual saved Blender render; no correspondence prediction and no geometry-projected labels.",
+  "facial_landmarks": [
+    "eye_image_left_center",
+    "eye_image_right_center",
+    "pupil_image_left_center",
+    "pupil_image_right_center",
+    "nose_center",
+    "mouth_junction",
+    "mouth_image_left_corner",
+    "mouth_image_right_corner",
+    "cheek_image_left_center",
+    "cheek_image_right_center"
+  ],
+  "major_measurements": [
+    "head_without_ears_tuft_whiskers_aabb_width",
+    "head_without_ears_tuft_whiskers_aabb_height",
+    "torso_hips_visible_aabb_width",
+    "torso_hips_visible_aabb_height",
+    "ear_image_left_outer_aabb_width",
+    "ear_image_left_outer_aabb_height",
+    "ear_image_right_outer_aabb_width",
+    "ear_image_right_outer_aabb_height",
+    "belly_visible_aabb_width",
+    "belly_visible_aabb_height",
+    "foot_image_left_aabb_width",
+    "foot_image_left_aabb_height",
+    "foot_image_right_aabb_width",
+    "foot_image_right_aabb_height",
+    "tail_visible_aabb_width",
+    "tail_visible_aabb_height",
+    "eye_center_distance"
+  ],
+  "manual_uncertainty_pixels": 8,
+  "poses": {
+    "wave": {
+      "image_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\wave-before-correction.png",
+      "source_path": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\renders\\wave-before-correction.png",
+      "width": 1254,
+      "height": 1254,
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_sha256": "8279f3a806cd3b95fd05d317ad6152e94a5525ce2007063f3607a2050222e741",
+      "landmarks": {
+        "eye_image_left_center": [
+          494,
+          392
+        ],
+        "eye_image_right_center": [
+          794,
+          335
+        ],
+        "pupil_image_left_center": [
+          495,
+          391
+        ],
+        "pupil_image_right_center": [
+          795,
+          334
+        ],
+        "nose_center": [
+          652,
+          390
+        ],
+        "mouth_junction": [
+          660,
+          450
+        ],
+        "mouth_image_left_corner": [
+          559,
+          458
+        ],
+        "mouth_image_right_corner": [
+          752,
+          418
+        ],
+        "cheek_image_left_center": [
+          465,
+          486
+        ],
+        "cheek_image_right_center": [
+          855,
+          411
+        ]
+      },
+      "manual_points_pixels": {
+        "eye_image_left_center": [
+          494,
+          392
+        ],
+        "eye_image_right_center": [
+          794,
+          335
+        ],
+        "pupil_image_left_center": [
+          495,
+          391
+        ],
+        "pupil_image_right_center": [
+          795,
+          334
+        ],
+        "nose_center": [
+          652,
+          390
+        ],
+        "mouth_junction": [
+          660,
+          450
+        ],
+        "mouth_image_left_corner": [
+          559,
+          458
+        ],
+        "mouth_image_right_corner": [
+          752,
+          418
+        ],
+        "cheek_image_left_center": [
+          465,
+          486
+        ],
+        "cheek_image_right_center": [
+          855,
+          411
+        ]
+      },
+      "manual_boxes_pixels": {
+        "head_without_ears_tuft_whiskers": [
+          345,
+          139,
+          946,
+          598
+        ],
+        "torso_hips_visible": [
+          450,
+          580,
+          888,
+          1094
+        ],
+        "ear_image_left_outer": [
+          285,
+          247,
+          393,
+          384
+        ],
+        "ear_image_right_outer": [
+          794,
+          155,
+          911,
+          282
+        ],
+        "belly_visible": [
+          499,
+          592,
+          836,
+          1027
+        ],
+        "foot_image_left": [
+          423,
+          1086,
+          609,
+          1159
+        ],
+        "foot_image_right": [
+          723,
+          1084,
+          912,
+          1159
+        ],
+        "tail_visible": [
+          228,
+          858,
+          468,
+          1088
+        ]
+      },
+      "measurements": {
+        "head_without_ears_tuft_whiskers_aabb_width": {
+          "start": [
+            345,
+            368.5
+          ],
+          "end": [
+            946,
+            368.5
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "head_without_ears_tuft_whiskers_aabb_height": {
+          "start": [
+            645.5,
+            139
+          ],
+          "end": [
+            645.5,
+            598
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "torso_hips_visible_aabb_width": {
+          "start": [
+            450,
+            837.0
+          ],
+          "end": [
+            888,
+            837.0
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "torso_hips_visible_aabb_height": {
+          "start": [
+            669.0,
+            580
+          ],
+          "end": [
+            669.0,
+            1094
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "ear_image_left_outer_aabb_width": {
+          "start": [
+            285,
+            315.5
+          ],
+          "end": [
+            393,
+            315.5
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "ear_image_left_outer_aabb_height": {
+          "start": [
+            339.0,
+            247
+          ],
+          "end": [
+            339.0,
+            384
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "ear_image_right_outer_aabb_width": {
+          "start": [
+            794,
+            218.5
+          ],
+          "end": [
+            911,
+            218.5
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "ear_image_right_outer_aabb_height": {
+          "start": [
+            852.5,
+            155
+          ],
+          "end": [
+            852.5,
+            282
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "belly_visible_aabb_width": {
+          "start": [
+            499,
+            809.5
+          ],
+          "end": [
+            836,
+            809.5
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "belly_visible_aabb_height": {
+          "start": [
+            667.5,
+            592
+          ],
+          "end": [
+            667.5,
+            1027
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "foot_image_left_aabb_width": {
+          "start": [
+            423,
+            1122.5
+          ],
+          "end": [
+            609,
+            1122.5
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "foot_image_left_aabb_height": {
+          "start": [
+            516.0,
+            1086
+          ],
+          "end": [
+            516.0,
+            1159
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "foot_image_right_aabb_width": {
+          "start": [
+            723,
+            1121.5
+          ],
+          "end": [
+            912,
+            1121.5
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "foot_image_right_aabb_height": {
+          "start": [
+            817.5,
+            1084
+          ],
+          "end": [
+            817.5,
+            1159
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "tail_visible_aabb_width": {
+          "start": [
+            228,
+            973.0
+          ],
+          "end": [
+            468,
+            973.0
+          ],
+          "method": "independently hand annotated candidate anatomical AABB width; endpoints are projection construction points"
+        },
+        "tail_visible_aabb_height": {
+          "start": [
+            348.0,
+            858
+          ],
+          "end": [
+            348.0,
+            1088
+          ],
+          "method": "independently hand annotated candidate anatomical AABB height; endpoints are projection construction points"
+        },
+        "eye_center_distance": {
+          "start": [
+            494,
+            392
+          ],
+          "end": [
+            794,
+            335
+          ],
+          "method": "Euclidean distance between independently hand annotated eye opening centers"
+        }
+      },
+      "unverified_features": [
+        {
+          "name": "tail_full_visible_extent",
+          "reason": "The image-left tapered tail is identifiable and annotated, but an additional cream flap between the legs cannot be confidently assigned to tail, belly, or another mesh from this view. Tail AABB measurements cover only the clearly identifiable image-left region; complete tail extent remains unverified.",
+          "ambiguous_region_pixels": [
+            595,
+            1022,
+            679,
+            1100
+          ]
+        }
+      ],
+      "manual_uncertainty_pixels": 8,
+      "annotation_notes": [
+        "Independent visual candidate annotation; reference geometry coordinates were not copied.",
+        "Torso excludes arms and flattened foot pads, and starts at its visible attachment under the chin. Some exact shoulder boundaries are occluded by the head.",
+        "No toe segmentation is visible on candidate feet.",
+        "Tail underside boundary is visibly jagged. This visual defect is not hidden by the coordinate measurements."
+      ],
+      "source_unchanged_sha256_check": true
+    }
+  },
+  "checkpoint": "recovered-01-pre-correction",
+  "single_pose_baseline_only": true
+}

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { crc32 } from 'node:zlib';
@@ -7,6 +7,7 @@ import test from 'node:test';
 
 import { loadCatalog, validateCatalog } from './catalog.ts';
 import { validatePNG } from './png.ts';
+import { validateGLB } from './glb.ts';
 
 // A complete 1 x 1 transparent RGBA PNG, including a compressed scanline and valid CRCs.
 const tinyPNG = Buffer.from(
@@ -14,9 +15,39 @@ const tinyPNG = Buffer.from(
   'base64',
 );
 
-await test('all catalog exports exist and have PNG dimensions', async () => {
+await test('all catalog exports have valid image or model containers', async () => {
   const catalog = await loadCatalog();
   assert.ok(catalog.assets.length > 0);
+});
+
+await test('the runtime rig stays within budget and contains every supported motion', async () => {
+  const data = await readFile(new URL('../exports/models/morii.glb', import.meta.url));
+  const summary = validateGLB(data, 'morii-3d');
+  assert.ok(summary.triangles > 0 && summary.triangles <= 40_000);
+  assert.equal(summary.joints, 15);
+  assert.deepEqual(summary.morphs, ['blink', 'mouthOpen']);
+  assert.deepEqual([...summary.clips].sort(), [
+    'encourage',
+    'idle',
+    'listen',
+    'move_backward',
+    'move_forward',
+    'move_left',
+    'move_right',
+    'reset',
+    'speak',
+    'think',
+    'wave',
+  ]);
+  for (const broken of [data.subarray(0, 16), data.subarray(0, -1)]) {
+    assert.throws(() => validateGLB(broken, 'invalid'), /GLB/);
+  }
+  const wrongVersion = Buffer.from(data);
+  wrongVersion.writeUInt32LE(1, 4);
+  assert.throws(() => validateGLB(wrongVersion, 'invalid'), /GLB header/);
+  const wrongChunk = Buffer.from(data);
+  wrongChunk.writeUInt32LE(0, 16);
+  assert.throws(() => validateGLB(wrongChunk, 'invalid'), /GLB JSON/);
 });
 
 await test('invalid, duplicate, and missing exports fail validation', async (t) => {

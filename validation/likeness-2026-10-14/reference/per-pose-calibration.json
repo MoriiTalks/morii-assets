@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "coordinate_system": "pixel_xy_top_left",
+  "source_reference_json": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\validation\\likeness-2026-10-14\\reference\\morii-manual-landmarks.json",
+  "reconstruction_source": "C:\\Users\\Ryu Tamin\\Documents\\SEMESTER-7\\MoriiTalks\\morii-assets\\source\\morii\\reconstruct.py",
+  "reconstruction_source_sha256": "1fb7162a70d5cd43362c42dd3ffa8f8fa3751c2978333e1e629a749ddc249089",
+  "method": "Adds practical hand-estimated pose/IK targets to the existing authoritative landmark analysis; it does not solve unique 3D joint locations. No live Blender or source changes. Head transform is a 2D rigid eye-anchor calibration of one shared head, not per-pose shape deformation.",
+  "pixels_per_meter": 350.0,
+  "camera": {
+    "type": "ORTHO",
+    "recommended_keep_current_fixed_camera": true,
+    "ortho_scale": 3.5828571428571427,
+    "camera_location_world": [
+      -0.037142857142857144,
+      -8,
+      1.5342857142857143
+    ],
+    "yaw_pitch_degrees": {
+      "yaw": null,
+      "pitch": null
+    },
+    "note": "Front orthographic approximation is the reconstruction assumption, not a uniquely measured PNG camera. Do not infer focal length, yaw or pitch from these five single views. Diagnostic eye scale is reported below but is not permission to scale the head or other parts independently."
+  },
+  "mapping": "pixel([x,y],depth) = [(x-640)/350,depth,(1164-y)/350]. Rig suffix R is image-left; L is image-right.",
+  "uncertainty_pixels": {
+    "facial_existing_annotations": 8,
+    "inferred_wrist_targets": 15,
+    "elbow_bend_hints": 20,
+    "occluded_shoulder_estimates": 30
+  },
+  "implementation_cautions": [
+    "aim_arm expects wrist location, not palm/main-pad center. Its hand center is approximately wrist + normalized hand_direction*0.145 metres (50.75 pixels).",
+    "Shoulder targets and elbow hints are anatomical fitting estimates under occlusion. Keep bone lengths fixed; use them as IK/bend guides and report reach clamp instead of quietly stretching limbs.",
+    "Bone location channels are in bone-local axes. Spine local Y roughly follows world Z; assigning Spine.location.z does not necessarily lower the torso in world Z. Set evaluated world/armature bone matrices intentionally.",
+    "Rigid eye alignment assumes the source Head rotation of -10.8 degrees about world Y, HEAD_ORIGIN=(644,364), and source eye feature centers (494,393)/(795,337). After posing the Spine, solve the Head world matrix to the target pivot rather than blindly adding local location values.",
+    "Surface continuity, joint depth, foot pitch and hidden bone positions cannot be proven from these PNGs. The normals/directions are practical starting assumptions checked by rendering."
+  ],
+  "poses": {
+    "listen": {
+      "head": {
+        "target_eye_centers_pixels": [
+          [
+            540.0,
+            445.0
+          ],
+          [
+            832.0,
+            348.0
+          ]
+        ],
+        "target_eye_midpoint_pixels": [
+          686.0,
+          396.5
+        ],
+        "reference_eye_line_roll_degrees": -18.37606315042473,
+        "additional_rigid_roll_relative_source_wave_degrees": -7.836879421796501,
+        "head_bone_world_y_rotation_degrees_start": -18.6368794217965,
+        "target_head_origin_pixels": [
+          685.3683166039204,
+          395.57751634859073
+        ],
+        "world_translation_relative_source_wave_head_origin_if_parent_unchanged": [
+          0.11819519029691557,
+          0,
+          -0.09022147528168781
+        ],
+        "target_head_origin_world_xz": [
+          0.129623761725487,
+          2.1954928104325977
+        ],
+        "eye_uniform_scale_diagnostic": 1.0049802906724108,
+        "apply_head_scale": false
+      },
+      "arms": {
+        "R": {
+          "shoulder": [
+            592,
+            707
+          ],
+          "elbow": [
+            578,
+            826
+          ],
+          "wrist": [
+            636,
+            879
+          ],
+          "hand_direction": [
+            0.73,
+            0,
+            -0.683
+          ],
+          "palm_normal": [
+            0,
+            1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            -0.011428571428571429,
+            -0.15,
+            0.8142857142857143
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            673.0588232003709,
+            913.6728441724017
+          ]
+        },
+        "L": {
+          "shoulder": [
+            858,
+            650
+          ],
+          "elbow": [
+            951,
+            650
+          ],
+          "wrist": [
+            975,
+            578
+          ],
+          "hand_direction": [
+            0.24,
+            0,
+            0.971
+          ],
+          "palm_normal": [
+            0,
+            -1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            0.9571428571428572,
+            -0.15,
+            1.6742857142857144
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            987.1773151979656,
+            528.732612261564
+          ]
+        }
+      },
+      "feet": {
+        "R": {
+          "target_visible_foot_center_pixels": [
+            575.0,
+            1109.0
+          ],
+          "target_visible_foot_bbox": [
+            476.0,
+            1053.0,
+            671.0,
+            1161.0
+          ],
+          "target_center_world_xz": [
+            -0.18571428571428572,
+            0.15714285714285714
+          ],
+          "normal_world_start": [
+            0,
+            0,
+            1
+          ],
+          "long_axis_world_start": [
+            0,
+            -1,
+            0.03
+          ],
+          "visible_sole_required": false,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        },
+        "L": {
+          "target_visible_foot_center_pixels": [
+            879.0,
+            1107.0
+          ],
+          "target_visible_foot_bbox": [
+            768.0,
+            1055.0,
+            985.0,
+            1156.0
+          ],
+          "target_center_world_xz": [
+            0.6828571428571428,
+            0.16285714285714287
+          ],
+          "normal_world_start": [
+            0,
+            0,
+            1
+          ],
+          "long_axis_world_start": [
+            0,
+            -1,
+            0.03
+          ],
+          "visible_sole_required": false,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        }
+      },
+      "note": "Seated/crouched. Image-left wrist cannot be reached by current rest shoulder at (542,642.5) without first posing shoulder/upper torso, or the helper will clamp it.",
+      "thigh_center_hints_pixels": {
+        "R": [
+          524,
+          1000
+        ],
+        "L": [
+          923,
+          1001
+        ]
+      }
+    },
+    "think": {
+      "head": {
+        "target_eye_centers_pixels": [
+          [
+            520.0,
+            435.0
+          ],
+          [
+            811.0,
+            348.0
+          ]
+        ],
+        "target_eye_midpoint_pixels": [
+          665.5,
+          391.5
+        ],
+        "reference_eye_line_roll_degrees": -16.645038214675942,
+        "additional_rigid_roll_relative_source_wave_degrees": -6.105854486047712,
+        "head_bone_world_y_rotation_degrees_start": -16.905854486047712,
+        "target_head_origin_pixels": [
+          664.8964707872736,
+          390.55885575527134
+        ],
+        "world_translation_relative_source_wave_head_origin_if_parent_unchanged": [
+          0.059704202249353265,
+          0,
+          -0.07588244501506097
+        ],
+        "target_head_origin_world_xz": [
+          0.0711327736779247,
+          2.209831840699225
+        ],
+        "eye_uniform_scale_diagnostic": 0.992036524994626,
+        "apply_head_scale": false
+      },
+      "arms": {
+        "R": {
+          "shoulder": [
+            573,
+            702
+          ],
+          "elbow": [
+            566,
+            783
+          ],
+          "wrist": [
+            665,
+            674
+          ],
+          "hand_direction": [
+            0.46,
+            0,
+            0.888
+          ],
+          "palm_normal": [
+            0,
+            1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            0.07142857142857142,
+            -0.15,
+            1.4
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            688.343319341509,
+            628.9372444016088
+          ]
+        },
+        "L": {
+          "shoulder": [
+            847,
+            671
+          ],
+          "elbow": [
+            884,
+            784
+          ],
+          "wrist": [
+            791,
+            810
+          ],
+          "hand_direction": [
+            -0.83,
+            0,
+            -0.558
+          ],
+          "palm_normal": [
+            0,
+            1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            0.43142857142857144,
+            -0.15,
+            1.0114285714285713
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            748.8830590693285,
+            838.3147626979695
+          ]
+        }
+      },
+      "feet": {
+        "R": {
+          "target_visible_foot_center_pixels": [
+            561.0,
+            1045.0
+          ],
+          "target_visible_foot_bbox": [
+            459.0,
+            944.0,
+            662.0,
+            1148.0
+          ],
+          "target_center_world_xz": [
+            -0.2257142857142857,
+            0.34
+          ],
+          "normal_world_start": [
+            0,
+            -1,
+            0
+          ],
+          "long_axis_world_start": [
+            -0.6,
+            0,
+            0.8
+          ],
+          "visible_sole_required": true,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        },
+        "L": {
+          "target_visible_foot_center_pixels": [
+            955.0,
+            1017.0
+          ],
+          "target_visible_foot_bbox": [
+            836.0,
+            908.0,
+            1075.0,
+            1126.0
+          ],
+          "target_center_world_xz": [
+            0.9,
+            0.42
+          ],
+          "normal_world_start": [
+            0,
+            -1,
+            0
+          ],
+          "long_axis_world_start": [
+            0.65,
+            0,
+            0.76
+          ],
+          "visible_sole_required": true,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        }
+      },
+      "note": "Seated with front soles visible and both teal hand backs visible; image-left hand reaches chin. Upward gaze exposes white below pupils; mouth stays closed.",
+      "thigh_center_hints_pixels": {
+        "R": [
+          519,
+          963
+        ],
+        "L": [
+          893,
+          976
+        ]
+      }
+    },
+    "explain": {
+      "head": {
+        "target_eye_centers_pixels": [
+          [
+            479.0,
+            391.0
+          ],
+          [
+            778.0,
+            334.0
+          ]
+        ],
+        "target_eye_midpoint_pixels": [
+          628.5,
+          362.5
+        ],
+        "reference_eye_line_roll_degrees": -10.793103120223122,
+        "additional_rigid_roll_relative_source_wave_degrees": -0.25391939159489263,
+        "head_bone_world_y_rotation_degrees_start": -11.053919391594894,
+        "target_head_origin_pixels": [
+          627.995573195137,
+          361.5022256775524
+        ],
+        "world_translation_relative_source_wave_head_origin_if_parent_unchanged": [
+          -0.045726933728179965,
+          0,
+          0.0071364980641359516
+        ],
+        "target_head_origin_world_xz": [
+          -0.03429836229960854,
+          2.2928507837784218
+        ],
+        "eye_uniform_scale_diagnostic": 0.9941849552857743,
+        "apply_head_scale": false
+      },
+      "arms": {
+        "R": {
+          "shoulder": [
+            533,
+            646
+          ],
+          "elbow": [
+            501,
+            765
+          ],
+          "wrist": [
+            601,
+            765
+          ],
+          "hand_direction": [
+            0.97,
+            0,
+            0.243
+          ],
+          "palm_normal": [
+            0,
+            1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            -0.11142857142857143,
+            -0.15,
+            1.14
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            650.2287553492673,
+            752.6674355155959
+          ]
+        },
+        "L": {
+          "shoulder": [
+            797,
+            615
+          ],
+          "elbow": [
+            894,
+            657
+          ],
+          "wrist": [
+            999,
+            615
+          ],
+          "hand_direction": [
+            0.94,
+            0,
+            0.341
+          ],
+          "palm_normal": [
+            0,
+            -1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            1.0257142857142858,
+            -0.15,
+            1.5685714285714285
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            1046.7078387008567,
+            597.6932202159659
+          ]
+        }
+      },
+      "feet": {
+        "R": {
+          "target_visible_foot_center_pixels": [
+            512.0,
+            1125.0
+          ],
+          "target_visible_foot_bbox": [
+            415.0,
+            1077.0,
+            607.0,
+            1170.0
+          ],
+          "target_center_world_xz": [
+            -0.3657142857142857,
+            0.11142857142857143
+          ],
+          "normal_world_start": [
+            0,
+            0,
+            1
+          ],
+          "long_axis_world_start": [
+            0,
+            -1,
+            0.03
+          ],
+          "visible_sole_required": false,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        },
+        "L": {
+          "target_visible_foot_center_pixels": [
+            826.0,
+            1115.0
+          ],
+          "target_visible_foot_bbox": [
+            721.0,
+            1068.0,
+            932.0,
+            1159.0
+          ],
+          "target_center_world_xz": [
+            0.5314285714285715,
+            0.14
+          ],
+          "normal_world_start": [
+            0,
+            0,
+            1
+          ],
+          "long_axis_world_start": [
+            0,
+            -1,
+            0.03
+          ],
+          "visible_sole_required": false,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        }
+      },
+      "note": "Standing. Image-left teal hand rests across chest, image-right palm extends sideways. ExplainL wrist already close to the source target; replace the generic wave pose on R.",
+      "thigh_center_hints_pixels": null
+    },
+    "encourage": {
+      "head": {
+        "target_eye_centers_pixels": [
+          [
+            489.0,
+            370.0
+          ],
+          [
+            797.0,
+            321.0
+          ]
+        ],
+        "target_eye_midpoint_pixels": [
+          643.0,
+          345.5
+        ],
+        "reference_eye_line_roll_degrees": -9.03948280335512,
+        "additional_rigid_roll_relative_source_wave_degrees": 1.4997009252731093,
+        "head_bone_world_y_rotation_degrees_start": -9.300299074726892,
+        "target_head_origin_pixels": [
+          642.5263429994568,
+          344.4872566732698
+        ],
+        "world_translation_relative_source_wave_head_origin_if_parent_unchanged": [
+          -0.004210448572980568,
+          0,
+          0.05575069521922907
+        ],
+        "target_head_origin_world_xz": [
+          0.007218122855590861,
+          2.3414649809335146
+        ],
+        "eye_uniform_scale_diagnostic": 1.0186447953176343,
+        "apply_head_scale": false
+      },
+      "arms": {
+        "R": {
+          "shoulder": [
+            530,
+            644
+          ],
+          "elbow": [
+            440,
+            664
+          ],
+          "wrist": [
+            315,
+            618
+          ],
+          "hand_direction": [
+            -0.4,
+            0,
+            0.916
+          ],
+          "palm_normal": [
+            0,
+            -1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            -0.9285714285714286,
+            -0.15,
+            1.56
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            294.6904116108862,
+            571.4910425889294
+          ]
+        },
+        "L": {
+          "shoulder": [
+            810,
+            626
+          ],
+          "elbow": [
+            901,
+            647
+          ],
+          "wrist": [
+            975,
+            583
+          ],
+          "hand_direction": [
+            0.4,
+            0,
+            0.916
+          ],
+          "palm_normal": [
+            0,
+            -1,
+            0
+          ],
+          "shoulder_status": "estimated under occlusion; not a directly visible joint",
+          "elbow_status": "bend hint, not unique anatomical joint",
+          "wrist_status": "inferred boundary between forearm and palm; verify by render",
+          "wrist_world_start": [
+            0.9571428571428572,
+            -0.15,
+            1.66
+          ],
+          "predicted_hand_center_pixels_from_source_0_145m_offset": [
+            995.3095883891137,
+            536.4910425889294
+          ]
+        }
+      },
+      "feet": {
+        "R": {
+          "target_visible_foot_center_pixels": [
+            478.0,
+            1140.0
+          ],
+          "target_visible_foot_bbox": [
+            374.0,
+            1088.0,
+            579.0,
+            1190.0
+          ],
+          "target_center_world_xz": [
+            -0.46285714285714286,
+            0.06857142857142857
+          ],
+          "normal_world_start": [
+            0,
+            0,
+            1
+          ],
+          "long_axis_world_start": [
+            0,
+            -1,
+            0.03
+          ],
+          "visible_sole_required": false,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        },
+        "L": {
+          "target_visible_foot_center_pixels": [
+            867.0,
+            1135.0
+          ],
+          "target_visible_foot_bbox": [
+            758.0,
+            1082.0,
+            973.0,
+            1180.0
+          ],
+          "target_center_world_xz": [
+            0.6485714285714286,
+            0.08285714285714285
+          ],
+          "normal_world_start": [
+            0,
+            0,
+            1
+          ],
+          "long_axis_world_start": [
+            0,
+            -1,
+            0.03
+          ],
+          "visible_sole_required": false,
+          "note": "Projected foot silhouette center is not a solved ankle/bone origin. Transform actual foot geometry around its ankle and verify target bounds; do not deform the image or change shared foot dimensions."
+        }
+      },
+      "note": "Standing, both palms visible. Wrist targets are below palm centers; current source targets near palm centers lift both palms too high. Open mouth is an expression requirement.",
+      "thigh_center_hints_pixels": null
+    }
+  }
+}

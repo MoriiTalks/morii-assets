@@ -11,7 +11,7 @@
     "dev": "pnpm build && node scripts/preview.ts",
     "build": "pnpm build:styles && pnpm build:preview",
     "build:styles": "tailwindcss -i preview/styles.css -o dist/styles.css --minify",
-    "build:preview": "esbuild preview/app.ts --bundle --format=esm --target=es2022 --outfile=dist/app.js --minify",
+    "build:preview": "esbuild preview/app.ts --bundle --format=esm --target=es2022 --splitting --chunk-names=chunk-[hash] --outdir=dist --minify",
     "validate": "node scripts/validate.ts",
     "test": "node --test scripts/catalog.test.ts",
     "lint": "eslint . --max-warnings 0",
@@ -24,12 +24,14 @@
     "@eslint/js": "9.39.5",
     "@tailwindcss/cli": "4.3.3",
     "@types/node": "24.19.1",
+    "@types/three": "0.186.0",
     "esbuild": "0.28.2",
     "eslint": "9.39.5",
     "eslint-config-prettier": "10.1.8",
     "prettier": "3.9.9",
     "prettier-plugin-tailwindcss": "0.8.1",
     "tailwindcss": "4.3.3",
+    "three": "0.186.1",
     "typescript": "6.0.3",
     "typescript-eslint": "8.71.1"
   }

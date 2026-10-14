@@ -17,9 +17,37 @@
     color-scheme: light;
   }
 
-  a:focus-visible {
+  :is(a, button, select, input):focus-visible {
     outline: 3px solid var(--color-teal);
     outline-offset: 3px;
     border-radius: 4px;
+  }
+}
+
+@layer components {
+  .model-preview {
+    @apply m-auto max-h-[calc(100dvh-2rem)] w-[min(48rem,calc(100vw-2rem))] overflow-auto rounded-3xl border border-line bg-cream p-0 text-ink;
+  }
+
+  .model-preview::backdrop {
+    background: rgb(24 61 55 / 32%);
+  }
+
+  .model-stage {
+    height: min(30rem, 58dvh);
+  }
+
+  .model-stage canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .model-control {
+    @apply min-h-11 rounded-xl border border-line bg-white px-4 text-sm font-medium text-teal disabled:opacity-40;
+  }
+
+  .model-play {
+    @apply border-teal bg-teal text-white;
   }
 }

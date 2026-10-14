@@ -1,0 +1,58 @@
+{
+  "asset": "morii.glb",
+  "generator": "Blender 5.2.2 LTS",
+  "triangles": 38508,
+  "bytes": 1247440,
+  "clips": {
+    "idle": 4.0,
+    "wave": 2.4166666666666665,
+    "listen": 2.4166666666666665,
+    "think": 2.7916666666666665,
+    "speak": 2.4166666666666665,
+    "encourage": 2.4166666666666665,
+    "move_left": 3.0,
+    "move_right": 3.0,
+    "move_forward": 3.0,
+    "move_backward": 3.0,
+    "reset": 0.5833333333333334
+  },
+  "bones": [
+    "Root",
+    "Spine",
+    "Head",
+    "Arm.L",
+    "Forearm.L",
+    "Hand.L",
+    "Arm.R",
+    "Forearm.R",
+    "Hand.R",
+    "Tail",
+    "TailTip",
+    "Leg.L",
+    "Foot.L",
+    "Leg.R",
+    "Foot.R"
+  ],
+  "morphs": [
+    "blink",
+    "mouthOpen"
+  ],
+  "optionalNodes": [
+    "IdeaCard"
+  ],
+  "maxTravelMeters": 0.32,
+  "restHeightMeters": 3.0199999511241913,
+  "boundsYUp": {
+    "min": [
+      -1.2336204051971436,
+      0.006999999284744263,
+      -0.5916447639465332
+    ],
+    "max": [
+      0.8939999341964722,
+      3.0269999504089355,
+      0.7710000276565552
+    ]
+  },
+  "notes": "Runtime must hide IdeaCard by default. Voice mouth movement is a cue, not phoneme lip sync."
+}
